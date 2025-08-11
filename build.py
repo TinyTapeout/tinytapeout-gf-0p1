@@ -50,14 +50,14 @@ class TopFlow(SequentialFlow):
         KLayout.StreamOut,
         KLayout.XOR,
         Checker.XOR,
-        # Magic.SpiceExtraction,
-        # Checker.IllegalOverlap,
-        # Netgen.LVS,
-        # Checker.LVS,
-        # KLayout.DRC,
-        # Checker.KLayoutDRC,
-        # Magic.DRC,
-        # Checker.MagicDRC,
+        Magic.SpiceExtraction,
+        Checker.IllegalOverlap,
+        Netgen.LVS,
+        Checker.LVS,
+        KLayout.DRC,
+        Checker.KLayoutDRC,
+        Magic.DRC,
+        Checker.MagicDRC,
     ]
 
 
