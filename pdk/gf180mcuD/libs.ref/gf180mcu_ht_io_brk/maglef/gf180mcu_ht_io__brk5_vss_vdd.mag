@@ -1,0 +1,76 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 1755005639
+<< obsm1 >>
+rect -32 13108 1032 69957
+<< obsm2 >>
+rect 0 13622 1000 69616
+<< metal3 >>
+rect 0 63600 200 65000
+rect 800 63600 1000 65000
+rect 0 49200 200 50600
+rect 800 49200 1000 50600
+<< obsm3 >>
+rect 260 63540 740 65000
+rect 200 50660 800 63540
+rect 260 49200 740 50660
+<< metal4 >>
+rect 0 63600 200 65000
+rect 800 63600 1000 65000
+rect 0 49200 200 50600
+rect 800 49200 1000 50600
+<< obsm4 >>
+rect 260 63540 740 65000
+rect 200 50660 800 63540
+rect 260 49200 740 50660
+<< metal5 >>
+rect 0 63600 200 65000
+rect 800 63600 1000 65000
+rect 0 49200 200 50600
+rect 800 49200 1000 50600
+rect 0 62000 1000 63400
+rect 0 50800 1000 52200
+<< obsm5 >>
+rect 300 63500 700 65000
+rect 200 50700 800 63500
+rect 300 49200 700 50700
+<< labels >>
+rlabel metal5 s 800 49200 1000 50600 6 VSS
+port 1 nsew ground bidirectional
+rlabel metal5 s 800 63600 1000 65000 6 VSS
+port 1 nsew ground bidirectional
+rlabel metal4 s 800 49200 1000 50600 6 VSS
+port 1 nsew ground bidirectional
+rlabel metal4 s 800 63600 1000 65000 6 VSS
+port 1 nsew ground bidirectional
+rlabel metal3 s 800 49200 1000 50600 6 VSS
+port 1 nsew ground bidirectional
+rlabel metal3 s 800 63600 1000 65000 6 VSS
+port 1 nsew ground bidirectional
+rlabel metal3 s 0 63600 200 65000 6 VSS
+port 1 nsew ground bidirectional
+rlabel metal4 s 0 63600 200 65000 6 VSS
+port 1 nsew ground bidirectional
+rlabel metal5 s 0 63600 200 65000 6 VSS
+port 1 nsew ground bidirectional
+rlabel metal5 s 0 49200 200 50600 6 VSS
+port 1 nsew ground bidirectional
+rlabel metal4 s 0 49200 200 50600 6 VSS
+port 1 nsew ground bidirectional
+rlabel metal3 s 0 49200 200 50600 6 VSS
+port 1 nsew ground bidirectional
+rlabel metal5 s 498 51518 498 51518 6 VDD
+port 2 nsew power bidirectional
+rlabel metal5 s 498 62718 498 62718 6 VDD
+port 2 nsew power bidirectional
+<< properties >>
+string FIXED_BBOX 0 0 1000 70000
+string LEFclass PAD
+string LEFsite GF_IO_Site
+string LEFsymmetry X Y R90
+string LEFview TRUE
+string GDS_END 57934
+string GDS_FILE ../gds/gf180mcu_ht_io_brk.gds
+string GDS_START 56924
+<< end >>

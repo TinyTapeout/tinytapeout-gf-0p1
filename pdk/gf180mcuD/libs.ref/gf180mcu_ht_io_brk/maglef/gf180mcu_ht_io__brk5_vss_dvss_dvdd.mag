@@ -1,0 +1,136 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 1755005639
+<< obsm1 >>
+rect -32 13108 1032 69957
+<< obsm2 >>
+rect 0 13622 1000 69616
+<< metal3 >>
+rect 0 63600 200 65000
+rect 800 63600 1000 65000
+rect 0 49200 200 50600
+rect 800 49200 1000 50600
+<< obsm3 >>
+rect 260 63540 740 65000
+rect 200 50660 800 63540
+rect 260 49200 740 50660
+<< metal4 >>
+rect 0 63600 200 65000
+rect 800 63600 1000 65000
+rect 0 49200 200 50600
+rect 800 49200 1000 50600
+<< obsm4 >>
+rect 260 63540 740 65000
+rect 200 50660 800 63540
+rect 260 49200 740 50660
+<< metal5 >>
+rect 0 63600 200 65000
+rect 800 63600 1000 65000
+rect 0 49200 200 50600
+rect 800 49200 1000 50600
+rect 0 68400 1000 69678
+rect 0 65200 1000 66600
+rect 0 60400 1000 61800
+rect 0 57200 1000 58600
+rect 0 46000 1000 49000
+rect 0 39600 1000 41000
+rect 0 25200 1000 26600
+rect 0 20400 1000 23400
+rect 0 17200 1000 20200
+rect 0 14000 1000 17000
+rect 0 66800 1000 68200
+rect 0 58800 1000 60200
+rect 0 55600 1000 57000
+rect 0 54000 1000 55400
+rect 0 52400 1000 53800
+rect 0 42800 1000 45800
+rect 0 41200 1000 42600
+rect 0 36400 1000 39400
+rect 0 33200 1000 36200
+rect 0 30000 1000 33000
+rect 0 26800 1000 29800
+rect 0 23600 1000 25000
+<< obsm5 >>
+rect 300 63500 700 65000
+rect 200 50700 800 63500
+rect 300 49200 700 50700
+<< labels >>
+rlabel metal5 s 800 49200 1000 50600 6 VSS
+port 1 nsew ground bidirectional
+rlabel metal5 s 800 63600 1000 65000 6 VSS
+port 1 nsew ground bidirectional
+rlabel metal4 s 800 49200 1000 50600 6 VSS
+port 1 nsew ground bidirectional
+rlabel metal4 s 800 63600 1000 65000 6 VSS
+port 1 nsew ground bidirectional
+rlabel metal3 s 800 49200 1000 50600 6 VSS
+port 1 nsew ground bidirectional
+rlabel metal3 s 800 63600 1000 65000 6 VSS
+port 1 nsew ground bidirectional
+rlabel metal3 s 0 63600 200 65000 6 VSS
+port 1 nsew ground bidirectional
+rlabel metal4 s 0 63600 200 65000 6 VSS
+port 1 nsew ground bidirectional
+rlabel metal5 s 0 63600 200 65000 6 VSS
+port 1 nsew ground bidirectional
+rlabel metal5 s 0 49200 200 50600 6 VSS
+port 1 nsew ground bidirectional
+rlabel metal4 s 0 49200 200 50600 6 VSS
+port 1 nsew ground bidirectional
+rlabel metal3 s 0 49200 200 50600 6 VSS
+port 1 nsew ground bidirectional
+rlabel metal5 s 498 15418 498 15418 6 DVSS
+port 2 nsew ground bidirectional
+rlabel metal5 s 498 18698 498 18698 6 DVSS
+port 2 nsew ground bidirectional
+rlabel metal5 s 498 21858 498 21858 6 DVSS
+port 2 nsew ground bidirectional
+rlabel metal5 s 498 26018 498 26018 6 DVSS
+port 2 nsew ground bidirectional
+rlabel metal5 s 498 40238 498 40238 6 DVSS
+port 2 nsew ground bidirectional
+rlabel metal5 s 498 47578 498 47578 6 DVSS
+port 2 nsew ground bidirectional
+rlabel metal5 s 498 57858 498 57858 6 DVSS
+port 2 nsew ground bidirectional
+rlabel metal5 s 498 61058 498 61058 6 DVSS
+port 2 nsew ground bidirectional
+rlabel metal5 s 498 68998 498 68998 6 DVSS
+port 2 nsew ground bidirectional
+rlabel metal5 s 498 65858 498 65858 6 DVSS
+port 2 nsew ground bidirectional
+rlabel metal5 s 498 67458 498 67458 6 DVDD
+port 3 nsew power bidirectional
+rlabel metal5 s 498 24218 498 24218 6 DVDD
+port 3 nsew power bidirectional
+rlabel metal5 s 498 28358 498 28358 6 DVDD
+port 3 nsew power bidirectional
+rlabel metal5 s 498 31738 498 31738 6 DVDD
+port 3 nsew power bidirectional
+rlabel metal5 s 498 34858 498 34858 6 DVDD
+port 3 nsew power bidirectional
+rlabel metal5 s 498 37918 498 37918 6 DVDD
+port 3 nsew power bidirectional
+rlabel metal5 s 498 41878 498 41878 6 DVDD
+port 3 nsew power bidirectional
+rlabel metal5 s 498 44338 498 44338 6 DVDD
+port 3 nsew power bidirectional
+rlabel metal5 s 498 59458 498 59458 6 DVDD
+port 3 nsew power bidirectional
+rlabel metal5 s 498 53058 498 53058 6 DVDD
+port 3 nsew power bidirectional
+rlabel metal5 s 498 54658 498 54658 6 DVDD
+port 3 nsew power bidirectional
+rlabel metal5 s 498 56258 498 56258 6 DVDD
+port 3 nsew power bidirectional
+<< properties >>
+string FIXED_BBOX 0 0 1000 70000
+string LEFclass PAD
+string LEFsite GF_IO_Site
+string LEFsymmetry X Y R90
+string LEFview TRUE
+string GDS_END 69546
+string GDS_FILE ../gds/gf180mcu_ht_io_brk.gds
+string GDS_START 66456
+<< end >>

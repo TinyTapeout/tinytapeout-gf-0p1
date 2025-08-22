@@ -1,0 +1,140 @@
+library ("gf180mcu_ht_io_brk__ss_125C_2v25") {
+
+	input_threshold_pct_rise : 50.000000;
+	output_threshold_pct_rise : 50.000000;
+	input_threshold_pct_fall : 50.000000;
+	output_threshold_pct_fall : 50.000000;
+	slew_lower_threshold_pct_rise : 10.000000;
+	slew_upper_threshold_pct_rise : 90.000000;
+	slew_lower_threshold_pct_fall : 10.000000;
+	slew_upper_threshold_pct_fall : 90.000000;
+
+	cell ("gf180mcu_ht_io__brk5_vss") {
+		dont_touch : true;
+		dont_use   : true;
+		area       : 1750.000000 ;
+		pin ("VSS") {
+			direction     : "inout";
+			capacitance   : 0;
+		}
+	}
+
+	cell ("gf180mcu_ht_io__brk5_vss_vdd") {
+		dont_touch : true;
+		dont_use   : true;
+		area       : 1750.000000 ;
+		pin ("VSS") {
+			direction     : "inout";
+			capacitance   : 0;
+		}
+		pin ("VDD") {
+			direction     : "inout";
+			capacitance   : 0;
+		}
+	}
+
+	cell ("gf180mcu_ht_io__brk5_vss_dvss") {
+		dont_touch : true;
+		dont_use   : true;
+		area       : 1750.000000 ;
+		pin ("VSS") {
+			direction     : "inout";
+			capacitance   : 0;
+		}
+		pin ("DVSS") {
+			direction     : "inout";
+			capacitance   : 0;
+		}
+	}
+
+	cell ("gf180mcu_ht_io__brk5_vss_vdd_dvss") {
+		dont_touch : true;
+		dont_use   : true;
+		area       : 1750.000000 ;
+		pin ("VSS") {
+			direction     : "inout";
+			capacitance   : 0;
+		}
+		pin ("VDD") {
+			direction     : "inout";
+			capacitance   : 0;
+		}
+		pin ("DVSS") {
+			direction     : "inout";
+			capacitance   : 0;
+		}
+	}
+
+	cell ("gf180mcu_ht_io__brk5_vss_dvdd") {
+		dont_touch : true;
+		dont_use   : true;
+		area       : 1750.000000 ;
+		pin ("VSS") {
+			direction     : "inout";
+			capacitance   : 0;
+		}
+		pin ("DVDD") {
+			direction     : "inout";
+			capacitance   : 0;
+		}
+	}
+
+	cell ("gf180mcu_ht_io__brk5_vss_vdd_dvdd") {
+		dont_touch : true;
+		dont_use   : true;
+		area       : 1750.000000 ;
+		pin ("VSS") {
+			direction     : "inout";
+			capacitance   : 0;
+		}
+		pin ("VDD") {
+			direction     : "inout";
+			capacitance   : 0;
+		}
+		pin ("DVDD") {
+			direction     : "inout";
+			capacitance   : 0;
+		}
+	}
+
+	cell ("gf180mcu_ht_io__brk5_vss_dvss_dvdd") {
+		dont_touch : true;
+		dont_use   : true;
+		area       : 1750.000000 ;
+		pin ("VSS") {
+			direction     : "inout";
+			capacitance   : 0;
+		}
+		pin ("DVSS") {
+			direction     : "inout";
+			capacitance   : 0;
+		}
+		pin ("DVDD") {
+			direction     : "inout";
+			capacitance   : 0;
+		}
+	}
+
+	cell ("gf180mcu_ht_io__brk5_vss_vdd_dvss_dvdd") {
+		dont_touch : true;
+		dont_use   : true;
+		area       : 1750.000000 ;
+		pin ("VSS") {
+			direction     : "inout";
+			capacitance   : 0;
+		}
+		pin ("VDD") {
+			direction     : "inout";
+			capacitance   : 0;
+		}
+		pin ("DVSS") {
+			direction     : "inout";
+			capacitance   : 0;
+		}
+		pin ("DVDD") {
+			direction     : "inout";
+			capacitance   : 0;
+		}
+	}
+
+}

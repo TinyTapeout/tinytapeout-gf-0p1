@@ -1,0 +1,24 @@
+.SUBCKT gf180mcu_ht_io__brk5_vss VSS
+.ENDS
+
+.SUBCKT gf180mcu_ht_io__brk5_vss_vdd VSS VDD
+.ENDS
+
+.SUBCKT gf180mcu_ht_io__brk5_vss_dvss VSS DVSS
+.ENDS
+
+.SUBCKT gf180mcu_ht_io__brk5_vss_vdd_dvss VSS VDD DVSS
+.ENDS
+
+.SUBCKT gf180mcu_ht_io__brk5_vss_dvdd VSS DVDD
+.ENDS
+
+.SUBCKT gf180mcu_ht_io__brk5_vss_vdd_dvdd VSS VDD DVDD
+.ENDS
+
+.SUBCKT gf180mcu_ht_io__brk5_vss_dvss_dvdd VSS DVSS DVDD
+.ENDS
+
+.SUBCKT gf180mcu_ht_io__brk5_vss_vdd_dvss_dvdd VSS VDD DVSS DVDD
+.ENDS
+
