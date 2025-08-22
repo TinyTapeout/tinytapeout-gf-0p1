@@ -9,6 +9,9 @@
    id="svg1"
    inkscape:version="1.4.2 (unknown)"
    sodipodi:docname="gf0p1-fp-r6.svg"
+   inkscape:export-filename="gf0p1-fp-r6.png"
+   inkscape:export-xdpi="14.767442"
+   inkscape:export-ydpi="14.767442"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -41,6 +44,13 @@
     <g
        id="g579"
        transform="translate(-3.85e-4)">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect603"
+         width="2975.6001"
+         height="2975.6001"
+         x="0.00038499999"
+         y="0" />
       <path
          style="fill:#ffff00;fill-opacity:1;stroke:#666666;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:10, 20;stroke-dashoffset:0;stroke-opacity:1"
          d="M 39.008385,779.46664 H 403.67505"
@@ -161,13 +171,6 @@
          d="M 2398.5149,403.67503 V 221.34173"
          id="path603"
          sodipodi:nodetypes="cc" />
-      <rect
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="rect603"
-         width="2975.6001"
-         height="2975.6001"
-         x="0.00038499999"
-         y="0" />
     </g>
     <g
        id="g582">
