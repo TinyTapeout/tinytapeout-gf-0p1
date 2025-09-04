@@ -1,0 +1,58 @@
+library ("gf180mcu_ht_io_fix__ff_125C_2v75") {
+
+	input_threshold_pct_rise : 50.000000;
+	output_threshold_pct_rise : 50.000000;
+	input_threshold_pct_fall : 50.000000;
+	output_threshold_pct_fall : 50.000000;
+	slew_lower_threshold_pct_rise : 10.000000;
+	slew_upper_threshold_pct_rise : 90.000000;
+	slew_lower_threshold_pct_fall : 10.000000;
+	slew_upper_threshold_pct_fall : 90.000000;
+
+	cell ("gf180mcu_ht_io_fix__dvdd") {
+		pad_cell   : true;
+		dont_touch : true;
+		dont_use   : true;
+		area       : 26250.000000 ;
+		pin ("DVDD") {
+			direction     : "inout";
+			capacitance   : 0;
+			is_pad        : true;
+			drive_current : 0;
+			three_state   : "0";
+			function      : "1";
+		}
+		pin ("DVSS") {
+			direction     : "inout";
+			capacitance   : 0;
+		}
+		pin ("VSS") {
+			direction     : "inout";
+			capacitance   : 0;
+		}
+	}
+
+	cell ("gf180mcu_ht_io_fix__dvss") {
+		pad_cell   : true;
+		dont_touch : true;
+		dont_use   : true;
+		area       : 26250.000000 ;
+		pin ("DVDD") {
+			direction     : "inout";
+			capacitance   : 0;
+		}
+		pin ("DVSS") {
+			direction     : "inout";
+			capacitance   : 0;
+			is_pad        : true;
+			drive_current : 0;
+			three_state   : "0";
+			function      : "0";
+		}
+		pin ("VDD") {
+			direction     : "inout";
+			capacitance   : 0;
+		}
+	}
+
+}

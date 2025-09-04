@@ -54,10 +54,10 @@ make_io_sites \
 
 place_pad -row IO_WEST -location [calc_vertical_pad_location 21] {pad_w_0}  -master gf180mcu_fd_io__bi_24t
 place_pad -row IO_WEST -location [calc_vertical_pad_location 20] {pad_w_1}  -master gf180mcu_fd_io__in_c
-place_pad -row IO_WEST -location [calc_vertical_pad_location 19] {pad_w_2}  -master gf180mcu_fd_io__dvss
-place_pad -row IO_WEST -location [calc_vertical_pad_location 18] {pad_w_3}  -master gf180mcu_fd_io__dvdd
-place_pad -row IO_WEST -location [calc_vertical_pad_location 17] {pad_w_4}  -master gf180mcu_fd_io__dvss
-place_pad -row IO_WEST -location [calc_vertical_pad_location 16] {pad_w_5}  -master gf180mcu_fd_io__dvdd
+place_pad -row IO_WEST -location [calc_vertical_pad_location 19] {pad_w_2}  -master gf180mcu_ht_io_fix__dvss
+place_pad -row IO_WEST -location [calc_vertical_pad_location 18] {pad_w_3}  -master gf180mcu_ht_io_fix__dvdd
+place_pad -row IO_WEST -location [calc_vertical_pad_location 17] {pad_w_4}  -master gf180mcu_ht_io_fix__dvss
+place_pad -row IO_WEST -location [calc_vertical_pad_location 16] {pad_w_5}  -master gf180mcu_ht_io_fix__dvdd
 place_pad -row IO_WEST -location [calc_vertical_pad_location 15] {pad_w_6}  -master gf180mcu_fd_io__in_c
 place_pad -row IO_WEST -location [calc_vertical_pad_location 14] {pad_w_7}  -master gf180mcu_fd_io__in_c
 place_pad -row IO_WEST -location [calc_vertical_pad_location 13] {pad_w_8}  -master gf180mcu_fd_io__in_c
@@ -68,19 +68,19 @@ place_pad -row IO_WEST -location [calc_vertical_pad_location  9] {pad_w_12} -mas
 place_pad -row IO_WEST -location [calc_vertical_pad_location  8] {pad_w_13} -master gf180mcu_fd_io__in_c
 place_pad -row IO_WEST -location [calc_vertical_pad_location  7] {pad_w_14} -master gf180mcu_fd_io__in_c
 place_pad -row IO_WEST -location [calc_vertical_pad_location  6] {pad_w_15} -master gf180mcu_fd_io__in_c
-place_pad -row IO_WEST -location [calc_vertical_pad_location  5] {pad_w_16} -master gf180mcu_fd_io__dvss
-place_pad -row IO_WEST -location [calc_vertical_pad_location  4] {pad_w_17} -master gf180mcu_fd_io__dvdd
-place_pad -row IO_WEST -location [calc_vertical_pad_location  3] {pad_w_18} -master gf180mcu_fd_io__dvss
-place_pad -row IO_WEST -location [calc_vertical_pad_location  2] {pad_w_19} -master gf180mcu_fd_io__dvdd
+place_pad -row IO_WEST -location [calc_vertical_pad_location  5] {pad_w_16} -master gf180mcu_ht_io_fix__dvss
+place_pad -row IO_WEST -location [calc_vertical_pad_location  4] {pad_w_17} -master gf180mcu_ht_io_fix__dvdd
+place_pad -row IO_WEST -location [calc_vertical_pad_location  3] {pad_w_18} -master gf180mcu_ht_io_fix__dvss
+place_pad -row IO_WEST -location [calc_vertical_pad_location  2] {pad_w_19} -master gf180mcu_ht_io_fix__dvdd
 place_pad -row IO_WEST -location [calc_vertical_pad_location  1] {pad_w_20} -master gf180mcu_fd_io__bi_24t
 place_pad -row IO_WEST -location [calc_vertical_pad_location  0] {pad_w_21} -master gf180mcu_fd_io__in_c
 
 place_pad -row IO_SOUTH -location [calc_horizontal_pad_location  0] {pad_s_0}  -master gf180mcu_fd_io__bi_24t
 place_pad -row IO_SOUTH -location [calc_horizontal_pad_location  1] {pad_s_1}  -master gf180mcu_fd_io__in_c
-place_pad -row IO_SOUTH -location [calc_horizontal_pad_location  2] {pad_s_2}  -master gf180mcu_fd_io__dvss
-place_pad -row IO_SOUTH -location [calc_horizontal_pad_location  3] {pad_s_3}  -master gf180mcu_fd_io__dvdd
-place_pad -row IO_SOUTH -location [calc_horizontal_pad_location  4] {pad_s_4}  -master gf180mcu_fd_io__dvss
-place_pad -row IO_SOUTH -location [calc_horizontal_pad_location  5] {pad_s_5}  -master gf180mcu_fd_io__dvdd
+place_pad -row IO_SOUTH -location [calc_horizontal_pad_location  2] {pad_s_2}  -master gf180mcu_ht_io_fix__dvss
+place_pad -row IO_SOUTH -location [calc_horizontal_pad_location  3] {pad_s_3}  -master gf180mcu_ht_io_fix__dvdd
+place_pad -row IO_SOUTH -location [calc_horizontal_pad_location  4] {pad_s_4}  -master gf180mcu_ht_io_fix__dvss
+place_pad -row IO_SOUTH -location [calc_horizontal_pad_location  5] {pad_s_5}  -master gf180mcu_ht_io_fix__dvdd
 place_pad -row IO_SOUTH -location [calc_horizontal_pad_location  6] {pad_s_6}  -master gf180mcu_fd_io__asig_5p0
 place_pad -row IO_SOUTH -location [calc_horizontal_pad_location  7] {pad_s_7}  -master gf180mcu_fd_io__asig_5p0
 place_pad -row IO_SOUTH -location [calc_horizontal_pad_location  8] {pad_s_8}  -master gf180mcu_fd_io__bi_24t
@@ -91,19 +91,19 @@ place_pad -row IO_SOUTH -location [calc_horizontal_pad_location 12] {pad_s_12} -
 place_pad -row IO_SOUTH -location [calc_horizontal_pad_location 13] {pad_s_13} -master gf180mcu_fd_io__bi_24t
 place_pad -row IO_SOUTH -location [calc_horizontal_pad_location 14] {pad_s_14} -master gf180mcu_fd_io__bi_24t
 place_pad -row IO_SOUTH -location [calc_horizontal_pad_location 15] {pad_s_15} -master gf180mcu_fd_io__bi_24t
-place_pad -row IO_SOUTH -location [calc_horizontal_pad_location 16] {pad_s_16} -master gf180mcu_fd_io__dvss
-place_pad -row IO_SOUTH -location [calc_horizontal_pad_location 17] {pad_s_17} -master gf180mcu_fd_io__dvdd
-place_pad -row IO_SOUTH -location [calc_horizontal_pad_location 18] {pad_s_18} -master gf180mcu_fd_io__dvss
-place_pad -row IO_SOUTH -location [calc_horizontal_pad_location 19] {pad_s_19} -master gf180mcu_fd_io__dvdd
+place_pad -row IO_SOUTH -location [calc_horizontal_pad_location 16] {pad_s_16} -master gf180mcu_ht_io_fix__dvss
+place_pad -row IO_SOUTH -location [calc_horizontal_pad_location 17] {pad_s_17} -master gf180mcu_ht_io_fix__dvdd
+place_pad -row IO_SOUTH -location [calc_horizontal_pad_location 18] {pad_s_18} -master gf180mcu_ht_io_fix__dvss
+place_pad -row IO_SOUTH -location [calc_horizontal_pad_location 19] {pad_s_19} -master gf180mcu_ht_io_fix__dvdd
 place_pad -row IO_SOUTH -location [calc_horizontal_pad_location 20] {pad_s_20} -master gf180mcu_fd_io__bi_24t
 place_pad -row IO_SOUTH -location [calc_horizontal_pad_location 21] {pad_s_21} -master gf180mcu_fd_io__in_c
 
 place_pad -row IO_EAST -location [calc_vertical_pad_location  0] {pad_e_0}  -master gf180mcu_fd_io__bi_24t
 place_pad -row IO_EAST -location [calc_vertical_pad_location  1] {pad_e_1}  -master gf180mcu_fd_io__in_c
-place_pad -row IO_EAST -location [calc_vertical_pad_location  2] {pad_e_2}  -master gf180mcu_fd_io__dvss
-place_pad -row IO_EAST -location [calc_vertical_pad_location  3] {pad_e_3}  -master gf180mcu_fd_io__dvdd
-place_pad -row IO_EAST -location [calc_vertical_pad_location  4] {pad_e_4}  -master gf180mcu_fd_io__dvss
-place_pad -row IO_EAST -location [calc_vertical_pad_location  5] {pad_e_5}  -master gf180mcu_fd_io__dvdd
+place_pad -row IO_EAST -location [calc_vertical_pad_location  2] {pad_e_2}  -master gf180mcu_ht_io_fix__dvss
+place_pad -row IO_EAST -location [calc_vertical_pad_location  3] {pad_e_3}  -master gf180mcu_ht_io_fix__dvdd
+place_pad -row IO_EAST -location [calc_vertical_pad_location  4] {pad_e_4}  -master gf180mcu_ht_io_fix__dvss
+place_pad -row IO_EAST -location [calc_vertical_pad_location  5] {pad_e_5}  -master gf180mcu_ht_io_fix__dvdd
 place_pad -row IO_EAST -location [calc_vertical_pad_location  6] {pad_e_6}  -master gf180mcu_fd_io__bi_24t
 place_pad -row IO_EAST -location [calc_vertical_pad_location  7] {pad_e_7}  -master gf180mcu_fd_io__bi_24t
 place_pad -row IO_EAST -location [calc_vertical_pad_location  8] {pad_e_8}  -master gf180mcu_fd_io__bi_24t
@@ -114,19 +114,19 @@ place_pad -row IO_EAST -location [calc_vertical_pad_location 12] {pad_e_12} -mas
 place_pad -row IO_EAST -location [calc_vertical_pad_location 13] {pad_e_13} -master gf180mcu_fd_io__bi_24t
 place_pad -row IO_EAST -location [calc_vertical_pad_location 14] {pad_e_14} -master gf180mcu_fd_io__in_c
 place_pad -row IO_EAST -location [calc_vertical_pad_location 15] {pad_e_15} -master gf180mcu_fd_io__in_c
-place_pad -row IO_EAST -location [calc_vertical_pad_location 16] {pad_e_16} -master gf180mcu_fd_io__dvss
-place_pad -row IO_EAST -location [calc_vertical_pad_location 17] {pad_e_17} -master gf180mcu_fd_io__dvdd
-place_pad -row IO_EAST -location [calc_vertical_pad_location 18] {pad_e_18} -master gf180mcu_fd_io__dvss
-place_pad -row IO_EAST -location [calc_vertical_pad_location 19] {pad_e_19} -master gf180mcu_fd_io__dvdd
+place_pad -row IO_EAST -location [calc_vertical_pad_location 16] {pad_e_16} -master gf180mcu_ht_io_fix__dvss
+place_pad -row IO_EAST -location [calc_vertical_pad_location 17] {pad_e_17} -master gf180mcu_ht_io_fix__dvdd
+place_pad -row IO_EAST -location [calc_vertical_pad_location 18] {pad_e_18} -master gf180mcu_ht_io_fix__dvss
+place_pad -row IO_EAST -location [calc_vertical_pad_location 19] {pad_e_19} -master gf180mcu_ht_io_fix__dvdd
 place_pad -row IO_EAST -location [calc_vertical_pad_location 20] {pad_e_20} -master gf180mcu_fd_io__bi_24t
 place_pad -row IO_EAST -location [calc_vertical_pad_location 21] {pad_e_21} -master gf180mcu_fd_io__in_c
 
 place_pad -row IO_NORTH -location [calc_horizontal_pad_location 21] {pad_n_0}  -master gf180mcu_fd_io__bi_24t
 place_pad -row IO_NORTH -location [calc_horizontal_pad_location 20] {pad_n_1}  -master gf180mcu_fd_io__in_c
-place_pad -row IO_NORTH -location [calc_horizontal_pad_location 19] {pad_n_2}  -master gf180mcu_fd_io__dvss
-place_pad -row IO_NORTH -location [calc_horizontal_pad_location 18] {pad_n_3}  -master gf180mcu_fd_io__dvdd
-place_pad -row IO_NORTH -location [calc_horizontal_pad_location 17] {pad_n_4}  -master gf180mcu_fd_io__dvss
-place_pad -row IO_NORTH -location [calc_horizontal_pad_location 16] {pad_n_5}  -master gf180mcu_fd_io__dvdd
+place_pad -row IO_NORTH -location [calc_horizontal_pad_location 19] {pad_n_2}  -master gf180mcu_ht_io_fix__dvss
+place_pad -row IO_NORTH -location [calc_horizontal_pad_location 18] {pad_n_3}  -master gf180mcu_ht_io_fix__dvdd
+place_pad -row IO_NORTH -location [calc_horizontal_pad_location 17] {pad_n_4}  -master gf180mcu_ht_io_fix__dvss
+place_pad -row IO_NORTH -location [calc_horizontal_pad_location 16] {pad_n_5}  -master gf180mcu_ht_io_fix__dvdd
 place_pad -row IO_NORTH -location [calc_horizontal_pad_location 15] {pad_n_6}  -master gf180mcu_fd_io__in_c
 place_pad -row IO_NORTH -location [calc_horizontal_pad_location 14] {pad_n_7}  -master gf180mcu_fd_io__in_c
 place_pad -row IO_NORTH -location [calc_horizontal_pad_location 13] {pad_n_8}  -master gf180mcu_fd_io__in_s
@@ -137,10 +137,10 @@ place_pad -row IO_NORTH -location [calc_horizontal_pad_location  9] {pad_n_12} -
 place_pad -row IO_NORTH -location [calc_horizontal_pad_location  8] {pad_n_13} -master gf180mcu_fd_io__asig_5p0
 place_pad -row IO_NORTH -location [calc_horizontal_pad_location  7] {pad_n_14} -master gf180mcu_fd_io__asig_5p0
 place_pad -row IO_NORTH -location [calc_horizontal_pad_location  6] {pad_n_15} -master gf180mcu_fd_io__asig_5p0
-place_pad -row IO_NORTH -location [calc_horizontal_pad_location  5] {pad_n_16} -master gf180mcu_fd_io__dvss
-place_pad -row IO_NORTH -location [calc_horizontal_pad_location  4] {pad_n_17} -master gf180mcu_fd_io__dvdd
-place_pad -row IO_NORTH -location [calc_horizontal_pad_location  3] {pad_n_18} -master gf180mcu_fd_io__dvss
-place_pad -row IO_NORTH -location [calc_horizontal_pad_location  2] {pad_n_19} -master gf180mcu_fd_io__dvdd
+place_pad -row IO_NORTH -location [calc_horizontal_pad_location  5] {pad_n_16} -master gf180mcu_ht_io_fix__dvss
+place_pad -row IO_NORTH -location [calc_horizontal_pad_location  4] {pad_n_17} -master gf180mcu_ht_io_fix__dvdd
+place_pad -row IO_NORTH -location [calc_horizontal_pad_location  3] {pad_n_18} -master gf180mcu_ht_io_fix__dvss
+place_pad -row IO_NORTH -location [calc_horizontal_pad_location  2] {pad_n_19} -master gf180mcu_ht_io_fix__dvdd
 place_pad -row IO_NORTH -location [calc_horizontal_pad_location  1] {pad_n_20} -master gf180mcu_fd_io__bi_24t
 place_pad -row IO_NORTH -location [calc_horizontal_pad_location  0] {pad_n_21} -master gf180mcu_fd_io__in_c
 
@@ -186,9 +186,9 @@ place_io_fill -row IO_EAST {*}$iofill
 
 connect_by_abutment
 
-place_io_terminals pad_*/PAD
-place_io_terminals pad_*/DVSS
-place_io_terminals pad_*/DVDD
+place_io_terminals gf180mcu_fd_io__*/PAD
+place_io_terminals gf180mcu_ht_io_fix__dvss*/DVSS
+place_io_terminals gf180mcu_ht_io_fix__dvdd*/DVDD
 
 remove_io_rows
 

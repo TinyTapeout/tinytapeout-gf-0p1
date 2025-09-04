@@ -52,8 +52,8 @@ class TopFlow(SequentialFlow):
         Checker.XOR,
         Magic.SpiceExtraction,
         Checker.IllegalOverlap,
-        # Netgen.LVS,
-        # Checker.LVS,
+        Netgen.LVS,
+        Checker.LVS,
         KLayout.DRC,
         Checker.KLayoutDRC,
         # Magic.DRC,
@@ -108,6 +108,9 @@ if __name__ == '__main__':
     flow_cfg = {
         "DESIGN_NAME": "tt_top",
         "VERILOG_FILES": sources,
+        "VERILOG_DEFINES": [
+            "CONNECT_POWER_PADS",
+        ],
         "MACROS": macro_config([
             ("tt_main_macro", "../main", "main_inst", 688, 688),
             ("tt_cell_macro_0", "../cells/cell0", "cell_inst_0", 688, 2334),
@@ -141,10 +144,9 @@ if __name__ == '__main__':
         ],
         "EXTRA_LIBS": [
             "pdk_dir::libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__tt_025C_5v00.lib",
+            "pdk_dir::libs.ref/gf180mcu_ht_io_fix/lib/gf180mcu_ht_io_fix__tt_025C_5v00.lib",
         ],
         "EXTRA_LEFS": [
-            "pdk_dir::libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__dvss.lef",
-            "pdk_dir::libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__dvdd.lef",
             "pdk_dir::libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__in_c.lef",
             "pdk_dir::libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__in_s.lef",
             "pdk_dir::libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__bi_t.lef",
@@ -153,12 +155,15 @@ if __name__ == '__main__':
             "pdk_dir::libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__cor.lef",
             "pdk_dir::libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__fill10.lef",
             "pdk_dir::libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__fill5.lef",
+            "pdk_dir::libs.ref/gf180mcu_ht_io_fix/lef/gf180mcu_ht_io_fix__dvss.lef",
+            "pdk_dir::libs.ref/gf180mcu_ht_io_fix/lef/gf180mcu_ht_io_fix__dvdd.lef",
             "pdk_dir::libs.ref/gf180mcu_ht_io_brk/lef/gf180mcu_ht_io__brk5_vss_dvss.lef",
             "pdk_dir::libs.ref/gf180mcu_ht_io_brk/lef/gf180mcu_ht_io__brk5_vss_vdd_dvss.lef",
             "pdk_dir::libs.ref/gf180mcu_ht_io_brk/lef/gf180mcu_ht_io__brk5_vss_dvss_dvdd.lef",
         ],
         "EXTRA_GDS_FILES": [
             "pdk_dir::libs.ref/gf180mcu_fd_io/gds/gf180mcu_fd_io.gds",
+            "pdk_dir::libs.ref/gf180mcu_ht_io_fix/gds/gf180mcu_ht_io_fix.gds",
             "pdk_dir::libs.ref/gf180mcu_ht_io_brk/gds/gf180mcu_ht_io_brk.gds",
         ],
         "DIE_AREA": [0.00, 0.00, 2975.60, 2975.60],
