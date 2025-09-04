@@ -168,8 +168,8 @@ if __name__ == '__main__':
         "MAGIC_WRITE_LEF_PINONLY": True,
         "DESIGN_NAME": "tt_main_macro",
         "VERILOG_FILES": sources,
-        "DIE_AREA": [0, 0, 1800.00, 1800.00],
-        "CORE_AREA": [25.00, 25.00, 1775.00, 1775.00],
+        "DIE_AREA": [0, 0, 1600.00, 1600.00],
+        "CORE_AREA": [25.00, 25.00, 1575.00, 1575.00],
         "FP_PIN_ORDER_CFG": "dir::pin_order.cfg",
         "FALLBACK_SDC_FILE": "dir::base.sdc",  # FIXME: seems to disable all paths
         "SYNTH_LATCH_MAP": "dir::latch_map.v",

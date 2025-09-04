@@ -2,26 +2,21 @@
 import os
 import klayout.db as db
 
+source = "../cell1/runs/test/final/gds/tt_cell_macro_1.gds"
 target = "runs/test/final/gds/tt_cell_macro_3.gds"
 
-if ".gds" in target:
-    target_orig = target.replace(".gds", "_orig.gds")
-else:
-    target_orig = target + "_orig"
+os.makedirs(os.path.dirname(target), exist_ok=True)
 
 ly = db.Layout()
-ly.read(target)
+ly.read(source)
 dualgate = ly.find_layer(55, 0)
-if dualgate is None:
-    print("Dualgate layer (55/0) not present")
-    exit()
-ly.delete_layer(dualgate)
+if dualgate is not None:
+    ly.delete_layer(dualgate)
 
 for i in range(ly.cells()):
     old_name = ly.cell_name(i)
-    new_name = old_name.replace("gf180mcu_fd_", "gf180mcu_hfd_")
+    new_name = old_name.replace("gf180mcu_fd_", "gf180mcu_hfd_").replace("tt_cell_macro_1", "tt_cell_macro_3")
     if new_name != old_name:
         ly.rename_cell(i, new_name)
 
-os.rename(target, target_orig)
 ly.write(target)

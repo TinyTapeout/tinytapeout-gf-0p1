@@ -32,7 +32,7 @@ if __name__ == '__main__':
         "EXTRA_GDS_FILES": [f"{PDK_ROOT}/{PDK}/libs.ref/gf180mcu_as_sc_mcu7t3v3/gf180mcu_as_sc_mcu7t3v3__merged.gds"],
 
         "PL_TARGET_DENSITY_PCT": 60,
-        "CLOCK_PERIOD": 25,
+        "CLOCK_PERIOD": 100,
         "PL_RESIZER_HOLD_SLACK_MARGIN": 0.1,
         "GRT_RESIZER_HOLD_SLACK_MARGIN": 0.05,
         "RUN_LINTER": True,
@@ -61,9 +61,10 @@ if __name__ == '__main__':
         "VERILOG_FILES": [
             "dir::src/tt_cell_macro.v",
             "dir::src/heartbeat.v",
+            "dir::src/inverter.v",
         ],
-        "DIE_AREA": [0, 0, 125.00, 125.00],
-        "CORE_AREA": [15.00, 15.00, 110.00, 110.00],
+        "DIE_AREA": [0, 0, 225.00, 225.00],
+        "CORE_AREA": [15.00, 15.00, 210.00, 210.00],
         "FP_PIN_ORDER_CFG": "dir::pin_order.cfg",
     }
 
