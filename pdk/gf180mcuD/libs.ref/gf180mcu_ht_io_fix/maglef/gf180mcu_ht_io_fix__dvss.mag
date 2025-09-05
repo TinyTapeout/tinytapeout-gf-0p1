@@ -435,7 +435,7 @@ rlabel metal4 s 0 23600 200 25000 6 DVDD
 port 1 nsew power bidirectional
 rlabel metal3 s 0 23600 200 25000 6 DVDD
 port 1 nsew power bidirectional
-rlabel metal5 s 1500 400 13500 12400 6 DVSS
+rlabel metal5 s 5000 4000 10000 9000 6 DVSS
 port 2 nsew ground bidirectional
 rlabel metal5 s 14800 20400 15000 23400 6 DVSS
 port 2 nsew ground bidirectional

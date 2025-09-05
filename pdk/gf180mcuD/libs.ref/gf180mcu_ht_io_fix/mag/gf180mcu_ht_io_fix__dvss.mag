@@ -177,7 +177,7 @@ timestamp 1755005639
 transform 1 0 11 0 1 12400
 box -11 0 14989 57600
 << labels >>
-rlabel metal5 s 1500 400 13500 12400 4 DVSS
+rlabel metal5 s 5000 4000 10000 9000 4 DVSS
 port 2 nsew ground bidirectional
 rlabel metal5 s 14800 20400 15000 23400 4 DVSS
 port 2 nsew ground bidirectional

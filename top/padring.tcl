@@ -186,9 +186,16 @@ place_io_fill -row IO_EAST {*}$iofill
 
 connect_by_abutment
 
-place_io_terminals gf180mcu_fd_io__*/PAD
-place_io_terminals gf180mcu_ht_io_fix__dvss*/DVSS
-place_io_terminals gf180mcu_ht_io_fix__dvdd*/DVDD
+place_io_terminals pad_*/PAD
+place_io_terminals pad_*_2/DVSS
+place_io_terminals pad_*_3/DVDD
+place_io_terminals pad_*_4/DVSS
+place_io_terminals pad_*_5/DVDD
+place_io_terminals pad_*_16/DVSS
+place_io_terminals pad_*_17/DVDD
+place_io_terminals pad_*_18/DVSS
+place_io_terminals pad_*_19/DVDD
+#place_io_terminals pad_*/ASIG5V
 
 remove_io_rows
 

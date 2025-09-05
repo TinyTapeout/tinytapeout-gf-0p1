@@ -4,7 +4,7 @@ module tt_top (
 `ifdef CONNECT_POWER_PADS
     inout wire [31:0] power_pad,
 `endif
-`ifdef CONNECT ANALOG_PADS
+`ifdef CONNECT_ANALOG_PADS
     inout wire [5:0] analog_pad,
 `endif
     inout wire [49:0] digital_pad
@@ -347,8 +347,8 @@ assign analog_pad[5] = ty;
 (* keep *) gf180mcu_fd_io__asig_5p0 pad_s_6  (.ASIG5V(analog_pad[0]));
 (* keep *) gf180mcu_fd_io__asig_5p0 pad_s_7  (.ASIG5V(analog_pad[1]));
 `else
-(* keep *) gf180mcu_fd_io__asig_5p0 pad_s_6  (loop);
-(* keep *) gf180mcu_fd_io__asig_5p0 pad_s_7  (loop);
+(* keep *) gf180mcu_fd_io__asig_5p0 pad_s_6  (.ASIG5V(loop));
+(* keep *) gf180mcu_fd_io__asig_5p0 pad_s_7  (.ASIG5V(loop));
 `endif
 (* keep *) gf180mcu_fd_io__bi_24t   pad_s_8     (.PAD(digital_pad[16]), .Y(tt_bi_Y[ 0]), .A(tt_bi_A[ 0]), .OE(tt_bi_OE[ 0]), .IE(tt_bi_IE[ 0]), .SL(tt_bi_SL[ 0]), .CS(tt_bi_CS[ 0]), .PD(tt_bi_PD[ 0]), .PU(tt_bi_PU[ 0]));
 (* keep *) gf180mcu_fd_io__bi_24t   pad_s_9     (.PAD(digital_pad[17]), .Y(tt_bi_Y[ 1]), .A(tt_bi_A[ 1]), .OE(tt_bi_OE[ 1]), .IE(tt_bi_IE[ 1]), .SL(tt_bi_SL[ 1]), .CS(tt_bi_CS[ 1]), .PD(tt_bi_PD[ 1]), .PU(tt_bi_PU[ 1]));
@@ -436,10 +436,10 @@ assign analog_pad[5] = ty;
 (* keep *) gf180mcu_fd_io__asig_5p0 pad_n_14 (.ASIG5V(analog_pad[4]));
 (* keep *) gf180mcu_fd_io__asig_5p0 pad_n_15 (.ASIG5V(analog_pad[5]));
 `else
-(* keep *) gf180mcu_fd_io__asig_5p0 pad_n_12 (tie);
-(* keep *) gf180mcu_fd_io__asig_5p0 pad_n_13 (ta);
-(* keep *) gf180mcu_fd_io__asig_5p0 pad_n_14 (toe);
-(* keep *) gf180mcu_fd_io__asig_5p0 pad_n_15 (ty);
+(* keep *) gf180mcu_fd_io__asig_5p0 pad_n_12 (.ASIG5V(tie));
+(* keep *) gf180mcu_fd_io__asig_5p0 pad_n_13 (.ASIG5V(ta));
+(* keep *) gf180mcu_fd_io__asig_5p0 pad_n_14 (.ASIG5V(toe));
+(* keep *) gf180mcu_fd_io__asig_5p0 pad_n_15 (.ASIG5V(ty));
 `endif
 `ifdef CONNECT_POWER_PADS
 (* keep *) gf180mcu_ht_io_fix__dvss     pad_n_16   (.DVSS(power_pad[28]));

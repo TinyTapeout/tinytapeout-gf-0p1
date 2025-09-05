@@ -291,7 +291,7 @@ rect 14800 14000 15000 17000
 rect 300 13900 14700 69678
 rect 200 0 14800 13900
 << labels >>
-rlabel metal5 s 1500 400 13500 12400 6 DVDD
+rlabel metal5 s 5000 4000 10000 9000 6 DVDD
 port 1 nsew power bidirectional
 rlabel metal5 s 14800 23600 15000 25000 6 DVDD
 port 1 nsew power bidirectional
