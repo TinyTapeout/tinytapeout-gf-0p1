@@ -2,7 +2,17 @@
 
 module tt_top (
 `ifdef CONNECT_POWER_PADS
-    inout wire [31:0] power_pad,
+    inout wire vss,
+    inout wire vddio0,
+    inout wire vddio1,
+    inout wire vddio2,
+    inout wire vddio3,
+    inout wire vddio4,
+    inout wire vddcore0,
+    inout wire vddcore1,
+    inout wire vddcore2,
+    inout wire vddcore3,
+    inout wire vddcore4,
 `endif
 `ifdef CONNECT_ANALOG_PADS
     inout wire [5:0] analog_pad,
@@ -10,10 +20,6 @@ module tt_top (
     inout wire [49:0] digital_pad
 );
 
-
-wire vss;
-wire [4:0] vddio;
-wire [4:0] vddcore;
 
 wire [7:0] hclk_Y;
 wire [7:0] hclk_PD;
@@ -60,7 +66,7 @@ wire [2:0] pt_bi_PU;
 tt_main_macro main_inst (
 `ifdef USE_POWER_PINS
     .VSS(vss),
-    .VDD(vddcore[0]),
+    .VDD(vddcore0),
 `endif
     .tt_clk_Y,
     .tt_clk_PD,
@@ -94,7 +100,7 @@ tt_main_macro main_inst (
 tt_cell_macro_0 cell_inst_0 (
 `ifdef USE_POWER_PINS
     .VSS(vss),
-    .VDD(vddcore[1]),
+    .VDD(vddcore1),
 `endif
     .hclk_Y(hclk_Y[0]),
     .hclk_PD(hclk_PD[0]),
@@ -112,7 +118,7 @@ tt_cell_macro_0 cell_inst_0 (
 tt_cell_macro_1 cell_inst_1 (
 `ifdef USE_POWER_PINS
     .VSS(vss),
-    .VDD(vddcore[1]),
+    .VDD(vddcore1),
 `endif
     .hclk_Y(hclk_Y[1]),
     .hclk_PD(hclk_PD[1]),
@@ -130,7 +136,7 @@ tt_cell_macro_1 cell_inst_1 (
 tt_cell_macro_2 cell_inst_2 (
 `ifdef USE_POWER_PINS
     .VSS(vss),
-    .VDD(vddcore[2]),
+    .VDD(vddcore2),
 `endif
     .hclk_Y(hclk_Y[2]),
     .hclk_PD(hclk_PD[2]),
@@ -148,7 +154,7 @@ tt_cell_macro_2 cell_inst_2 (
 tt_cell_macro_3 cell_inst_3 (
 `ifdef USE_POWER_PINS
     .VSS(vss),
-    .VDD(vddcore[2]),
+    .VDD(vddcore2),
 `endif
     .hclk_Y(hclk_Y[3]),
     .hclk_PD(hclk_PD[3]),
@@ -166,7 +172,7 @@ tt_cell_macro_3 cell_inst_3 (
 tt_cell_macro_4 cell_inst_4 (
 `ifdef USE_POWER_PINS
     .VSS(vss),
-    .VDD(vddcore[3]),
+    .VDD(vddcore3),
 `endif
     .hclk_Y(hclk_Y[4]),
     .hclk_PD(hclk_PD[4]),
@@ -184,7 +190,7 @@ tt_cell_macro_4 cell_inst_4 (
 tt_cell_macro_5 cell_inst_5 (
 `ifdef USE_POWER_PINS
     .VSS(vss),
-    .VDD(vddcore[3]),
+    .VDD(vddcore3),
 `endif
     .hclk_Y(hclk_Y[5]),
     .hclk_PD(hclk_PD[5]),
@@ -202,7 +208,7 @@ tt_cell_macro_5 cell_inst_5 (
 tt_cell_macro_6 cell_inst_6 (
 `ifdef USE_POWER_PINS
     .VSS(vss),
-    .VDD(vddcore[4]),
+    .VDD(vddcore4),
 `endif
     .hclk_Y(hclk_Y[6]),
     .hclk_PD(hclk_PD[6]),
@@ -220,7 +226,7 @@ tt_cell_macro_6 cell_inst_6 (
 tt_cell_macro_7 cell_inst_7 (
 `ifdef USE_POWER_PINS
     .VSS(vss),
-    .VDD(vddcore[4]),
+    .VDD(vddcore4),
 `endif
     .hclk_Y(hclk_Y[7]),
     .hclk_PD(hclk_PD[7]),
@@ -237,41 +243,43 @@ tt_cell_macro_7 cell_inst_7 (
 
 
 `ifdef CONNECT_POWER_PADS
+wire [31:0] power_pad;
+
 assign power_pad[0] = vss;
-assign power_pad[1] = vddio[1];
+assign power_pad[1] = vddio1;
 assign power_pad[2] = vss;
-assign power_pad[3] = vddcore[0];
+assign power_pad[3] = vddcore0;
 assign power_pad[4] = vss;
-assign power_pad[5] = vddio[0];
+assign power_pad[5] = vddio0;
 assign power_pad[6] = vss;
-assign power_pad[7] = vddcore[2];
+assign power_pad[7] = vddcore2;
 
 assign power_pad[8] = vss;
-assign power_pad[9] = vddio[2];
+assign power_pad[9] = vddio2;
 assign power_pad[10] = vss;
-assign power_pad[11] = vddcore[0];
+assign power_pad[11] = vddcore0;
 assign power_pad[12] = vss;
-assign power_pad[13] = vddio[0];
+assign power_pad[13] = vddio0;
 assign power_pad[14] = vss;
-assign power_pad[15] = vddcore[3];
+assign power_pad[15] = vddcore3;
 
 assign power_pad[16] = vss;
-assign power_pad[17] = vddio[3];
+assign power_pad[17] = vddio3;
 assign power_pad[18] = vss;
-assign power_pad[19] = vddcore[0];
+assign power_pad[19] = vddcore0;
 assign power_pad[20] = vss;
-assign power_pad[21] = vddio[0];
+assign power_pad[21] = vddio0;
 assign power_pad[22] = vss;
-assign power_pad[23] = vddcore[4];
+assign power_pad[23] = vddcore4;
 
 assign power_pad[24] = vss;
-assign power_pad[25] = vddio[4];
+assign power_pad[25] = vddio4;
 assign power_pad[26] = vss;
-assign power_pad[27] = vddcore[0];
+assign power_pad[27] = vddcore0;
 assign power_pad[28] = vss;
-assign power_pad[29] = vddio[0];
+assign power_pad[29] = vddio0;
 assign power_pad[30] = vss;
-assign power_pad[31] = vddcore[1];
+assign power_pad[31] = vddcore1;
 `endif
 
 wire loop;
