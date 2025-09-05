@@ -242,71 +242,21 @@ tt_cell_macro_7 cell_inst_7 (
 );
 
 
-`ifdef CONNECT_POWER_PADS
-wire [31:0] power_pad;
-
-assign power_pad[0] = vss;
-assign power_pad[1] = vddio1;
-assign power_pad[2] = vss;
-assign power_pad[3] = vddcore0;
-assign power_pad[4] = vss;
-assign power_pad[5] = vddio0;
-assign power_pad[6] = vss;
-assign power_pad[7] = vddcore2;
-
-assign power_pad[8] = vss;
-assign power_pad[9] = vddio2;
-assign power_pad[10] = vss;
-assign power_pad[11] = vddcore0;
-assign power_pad[12] = vss;
-assign power_pad[13] = vddio0;
-assign power_pad[14] = vss;
-assign power_pad[15] = vddcore3;
-
-assign power_pad[16] = vss;
-assign power_pad[17] = vddio3;
-assign power_pad[18] = vss;
-assign power_pad[19] = vddcore0;
-assign power_pad[20] = vss;
-assign power_pad[21] = vddio0;
-assign power_pad[22] = vss;
-assign power_pad[23] = vddcore4;
-
-assign power_pad[24] = vss;
-assign power_pad[25] = vddio4;
-assign power_pad[26] = vss;
-assign power_pad[27] = vddcore0;
-assign power_pad[28] = vss;
-assign power_pad[29] = vddio0;
-assign power_pad[30] = vss;
-assign power_pad[31] = vddcore1;
-`endif
-
 wire loop;
 wire ty;
 wire toe;
 wire ta;
 wire tie;
 
-`ifdef CONNECT_ANALOG_PADS
-assign analog_pad[0] = loop;
-assign analog_pad[1] = loop;
-
-assign analog_pad[2] = tie;
-assign analog_pad[3] = ta;
-assign analog_pad[4] = toe;
-assign analog_pad[5] = ty;
-`endif
-
 
 // IO_WEST
 (* keep *) gf180mcu_fd_io__bi_24t   pad_w_0     (.PAD(digital_pad[ 0]), .Y(hsig_Y[1]), .A(hsig_A[1]), .OE(hsig_OE[1]), .IE(hsig_IE[1]), .SL(hsig_SL[1]), .CS(hsig_CS[1]), .PD(hsig_PD[1]), .PU(hsig_PU[1]));
 (* keep *) gf180mcu_fd_io__in_c     pad_w_1     (.PAD(digital_pad[ 1]), .Y(hclk_Y[1]), .PD(hclk_PD[1]), .PU(hclk_PU[1]));
 `ifdef CONNECT_POWER_PADS
-(* keep *) gf180mcu_ht_io_fix__dvss     pad_w_2    (.DVSS(power_pad[ 0]));
-(* keep *) gf180mcu_ht_io_fix__dvdd     pad_w_3    (.DVDD(power_pad[ 1]));
-(* keep *) gf180mcu_ht_io_fix__dvss     pad_w_4    (.DVSS(power_pad[ 2]));
-(* keep *) gf180mcu_ht_io_fix__dvdd     pad_w_5    (.DVDD(power_pad[ 3]));
+(* keep *) gf180mcu_ht_io_fix__dvss     pad_w_2    (.DVSS(vss));
+(* keep *) gf180mcu_ht_io_fix__dvdd     pad_w_3    (.DVDD(vddio1));
+(* keep *) gf180mcu_ht_io_fix__dvss     pad_w_4    (.DVSS(vss));
+(* keep *) gf180mcu_ht_io_fix__dvdd     pad_w_5    (.DVDD(vddcore0));
 `else
 (* keep *) gf180mcu_ht_io_fix__dvss     pad_w_2    ();
 (* keep *) gf180mcu_ht_io_fix__dvdd     pad_w_3    ();
@@ -324,10 +274,10 @@ assign analog_pad[5] = ty;
 (* keep *) gf180mcu_fd_io__in_c     pad_w_14    (.PAD(digital_pad[10]), .Y(tt_in_Y[ 7]), .PD(tt_in_PD[ 7]), .PU(tt_in_PU[ 7]));
 (* keep *) gf180mcu_fd_io__in_c     pad_w_15    (.PAD(digital_pad[11]), .Y(tt_in_Y[ 8]), .PD(tt_in_PD[ 8]), .PU(tt_in_PU[ 8]));
 `ifdef CONNECT_POWER_PADS
-(* keep *) gf180mcu_ht_io_fix__dvss     pad_w_16   (.DVSS(power_pad[ 4]));
-(* keep *) gf180mcu_ht_io_fix__dvdd     pad_w_17   (.DVDD(power_pad[ 5]));
-(* keep *) gf180mcu_ht_io_fix__dvss     pad_w_18   (.DVSS(power_pad[ 6]));
-(* keep *) gf180mcu_ht_io_fix__dvdd     pad_w_19   (.DVDD(power_pad[ 7]));
+(* keep *) gf180mcu_ht_io_fix__dvss     pad_w_16   (.DVSS(vss));
+(* keep *) gf180mcu_ht_io_fix__dvdd     pad_w_17   (.DVDD(vddio0));
+(* keep *) gf180mcu_ht_io_fix__dvss     pad_w_18   (.DVSS(vss));
+(* keep *) gf180mcu_ht_io_fix__dvdd     pad_w_19   (.DVDD(vddcore2));
 `else
 (* keep *) gf180mcu_ht_io_fix__dvss     pad_w_16   ();
 (* keep *) gf180mcu_ht_io_fix__dvdd     pad_w_17   ();
@@ -341,10 +291,10 @@ assign analog_pad[5] = ty;
 (* keep *) gf180mcu_fd_io__bi_24t   pad_s_0     (.PAD(digital_pad[14]), .Y(hsig_Y[3]), .A(hsig_A[3]), .OE(hsig_OE[3]), .IE(hsig_IE[3]), .SL(hsig_SL[3]), .CS(hsig_CS[3]), .PD(hsig_PD[3]), .PU(hsig_PU[3]));
 (* keep *) gf180mcu_fd_io__in_c     pad_s_1     (.PAD(digital_pad[15]), .Y(hclk_Y[3]), .PD(hclk_PD[3]), .PU(hclk_PU[3]));
 `ifdef CONNECT_POWER_PADS
-(* keep *) gf180mcu_ht_io_fix__dvss     pad_s_2    (.DVSS(power_pad[ 8]));
-(* keep *) gf180mcu_ht_io_fix__dvdd     pad_s_3    (.DVDD(power_pad[ 9]));
-(* keep *) gf180mcu_ht_io_fix__dvss     pad_s_4    (.DVSS(power_pad[10]));
-(* keep *) gf180mcu_ht_io_fix__dvdd     pad_s_5    (.DVDD(power_pad[11]));
+(* keep *) gf180mcu_ht_io_fix__dvss     pad_s_2    (.DVSS(vss));
+(* keep *) gf180mcu_ht_io_fix__dvdd     pad_s_3    (.DVDD(vddio2));
+(* keep *) gf180mcu_ht_io_fix__dvss     pad_s_4    (.DVSS(vss));
+(* keep *) gf180mcu_ht_io_fix__dvdd     pad_s_5    (.DVDD(vddcore0));
 `else
 (* keep *) gf180mcu_ht_io_fix__dvss     pad_s_2    ();
 (* keep *) gf180mcu_ht_io_fix__dvdd     pad_s_3    ();
@@ -352,11 +302,11 @@ assign analog_pad[5] = ty;
 (* keep *) gf180mcu_ht_io_fix__dvdd     pad_s_5    ();
 `endif
 `ifdef CONNECT_ANALOG_PADS
-(* keep *) gf180mcu_fd_io__asig_5p0 pad_s_6  (.ASIG5V(analog_pad[0]));
-(* keep *) gf180mcu_fd_io__asig_5p0 pad_s_7  (.ASIG5V(analog_pad[1]));
-`else
 (* keep *) gf180mcu_fd_io__asig_5p0 pad_s_6  (.ASIG5V(loop));
 (* keep *) gf180mcu_fd_io__asig_5p0 pad_s_7  (.ASIG5V(loop));
+`else
+(* keep *) gf180mcu_fd_io__asig_5p0 pad_s_6  ();
+(* keep *) gf180mcu_fd_io__asig_5p0 pad_s_7  ();
 `endif
 (* keep *) gf180mcu_fd_io__bi_24t   pad_s_8     (.PAD(digital_pad[16]), .Y(tt_bi_Y[ 0]), .A(tt_bi_A[ 0]), .OE(tt_bi_OE[ 0]), .IE(tt_bi_IE[ 0]), .SL(tt_bi_SL[ 0]), .CS(tt_bi_CS[ 0]), .PD(tt_bi_PD[ 0]), .PU(tt_bi_PU[ 0]));
 (* keep *) gf180mcu_fd_io__bi_24t   pad_s_9     (.PAD(digital_pad[17]), .Y(tt_bi_Y[ 1]), .A(tt_bi_A[ 1]), .OE(tt_bi_OE[ 1]), .IE(tt_bi_IE[ 1]), .SL(tt_bi_SL[ 1]), .CS(tt_bi_CS[ 1]), .PD(tt_bi_PD[ 1]), .PU(tt_bi_PU[ 1]));
@@ -367,10 +317,10 @@ assign analog_pad[5] = ty;
 (* keep *) gf180mcu_fd_io__bi_24t   pad_s_14    (.PAD(digital_pad[22]), .Y(tt_bi_Y[ 6]), .A(tt_bi_A[ 6]), .OE(tt_bi_OE[ 6]), .IE(tt_bi_IE[ 6]), .SL(tt_bi_SL[ 6]), .CS(tt_bi_CS[ 6]), .PD(tt_bi_PD[ 6]), .PU(tt_bi_PU[ 6]));
 (* keep *) gf180mcu_fd_io__bi_24t   pad_s_15    (.PAD(digital_pad[23]), .Y(tt_bi_Y[ 7]), .A(tt_bi_A[ 7]), .OE(tt_bi_OE[ 7]), .IE(tt_bi_IE[ 7]), .SL(tt_bi_SL[ 7]), .CS(tt_bi_CS[ 7]), .PD(tt_bi_PD[ 7]), .PU(tt_bi_PU[ 7]));
 `ifdef CONNECT_POWER_PADS
-(* keep *) gf180mcu_ht_io_fix__dvss     pad_s_16   (.DVSS(power_pad[12]));
-(* keep *) gf180mcu_ht_io_fix__dvdd     pad_s_17   (.DVDD(power_pad[13]));
-(* keep *) gf180mcu_ht_io_fix__dvss     pad_s_18   (.DVSS(power_pad[14]));
-(* keep *) gf180mcu_ht_io_fix__dvdd     pad_s_19   (.DVDD(power_pad[15]));
+(* keep *) gf180mcu_ht_io_fix__dvss     pad_s_16   (.DVSS(vss));
+(* keep *) gf180mcu_ht_io_fix__dvdd     pad_s_17   (.DVDD(vddio0));
+(* keep *) gf180mcu_ht_io_fix__dvss     pad_s_18   (.DVSS(vss));
+(* keep *) gf180mcu_ht_io_fix__dvdd     pad_s_19   (.DVDD(vddcore3));
 `else
 (* keep *) gf180mcu_ht_io_fix__dvss     pad_s_16   ();
 (* keep *) gf180mcu_ht_io_fix__dvdd     pad_s_17   ();
@@ -384,10 +334,10 @@ assign analog_pad[5] = ty;
 (* keep *) gf180mcu_fd_io__bi_24t   pad_e_0     (.PAD(digital_pad[26]), .Y(hsig_Y[5]), .A(hsig_A[5]), .OE(hsig_OE[5]), .IE(hsig_IE[5]), .SL(hsig_SL[5]), .CS(hsig_CS[5]), .PD(hsig_PD[5]), .PU(hsig_PU[5]));
 (* keep *) gf180mcu_fd_io__in_c     pad_e_1     (.PAD(digital_pad[27]), .Y(hclk_Y[5]), .PD(hclk_PD[5]), .PU(hclk_PU[5]));
 `ifdef CONNECT_POWER_PADS
-(* keep *) gf180mcu_ht_io_fix__dvss     pad_e_2    (.DVSS(power_pad[16]));
-(* keep *) gf180mcu_ht_io_fix__dvdd     pad_e_3    (.DVDD(power_pad[17]));
-(* keep *) gf180mcu_ht_io_fix__dvss     pad_e_4    (.DVSS(power_pad[18]));
-(* keep *) gf180mcu_ht_io_fix__dvdd     pad_e_5    (.DVDD(power_pad[19]));
+(* keep *) gf180mcu_ht_io_fix__dvss     pad_e_2    (.DVSS(vss));
+(* keep *) gf180mcu_ht_io_fix__dvdd     pad_e_3    (.DVDD(vddio3));
+(* keep *) gf180mcu_ht_io_fix__dvss     pad_e_4    (.DVSS(vss));
+(* keep *) gf180mcu_ht_io_fix__dvdd     pad_e_5    (.DVDD(vddcore0));
 `else
 (* keep *) gf180mcu_ht_io_fix__dvss     pad_e_2    ();
 (* keep *) gf180mcu_ht_io_fix__dvdd     pad_e_3    ();
@@ -405,10 +355,10 @@ assign analog_pad[5] = ty;
 (* keep *) gf180mcu_fd_io__in_c     pad_e_14    (.PAD(digital_pad[36]), .Y(tt_in_Y[ 9]), .PD(tt_in_PD[ 9]), .PU(tt_in_PU[ 9]));
 (* keep *) gf180mcu_fd_io__in_c     pad_e_15    (.PAD(digital_pad[37]), .Y(tt_in_Y[10]), .PD(tt_in_PD[10]), .PU(tt_in_PU[10]));
 `ifdef CONNECT_POWER_PADS
-(* keep *) gf180mcu_ht_io_fix__dvss     pad_e_16   (.DVSS(power_pad[20]));
-(* keep *) gf180mcu_ht_io_fix__dvdd     pad_e_17   (.DVDD(power_pad[21]));
-(* keep *) gf180mcu_ht_io_fix__dvss     pad_e_18   (.DVSS(power_pad[22]));
-(* keep *) gf180mcu_ht_io_fix__dvdd     pad_e_19   (.DVDD(power_pad[23]));
+(* keep *) gf180mcu_ht_io_fix__dvss     pad_e_16   (.DVSS(vss));
+(* keep *) gf180mcu_ht_io_fix__dvdd     pad_e_17   (.DVDD(vddio0));
+(* keep *) gf180mcu_ht_io_fix__dvss     pad_e_18   (.DVSS(vss));
+(* keep *) gf180mcu_ht_io_fix__dvdd     pad_e_19   (.DVDD(vddcore4));
 `else
 (* keep *) gf180mcu_ht_io_fix__dvss     pad_e_16   ();
 (* keep *) gf180mcu_ht_io_fix__dvdd     pad_e_17   ();
@@ -422,10 +372,10 @@ assign analog_pad[5] = ty;
 (* keep *) gf180mcu_fd_io__bi_24t   pad_n_0     (.PAD(digital_pad[40]), .Y(hsig_Y[7]), .A(hsig_A[7]), .OE(hsig_OE[7]), .IE(hsig_IE[7]), .SL(hsig_SL[7]), .CS(hsig_CS[7]), .PD(hsig_PD[7]), .PU(hsig_PU[7]));
 (* keep *) gf180mcu_fd_io__in_c     pad_n_1     (.PAD(digital_pad[41]), .Y(hclk_Y[7]), .PD(hclk_PD[7]), .PU(hclk_PU[7]));
 `ifdef CONNECT_POWER_PADS
-(* keep *) gf180mcu_ht_io_fix__dvss     pad_n_2    (.DVSS(power_pad[24]));
-(* keep *) gf180mcu_ht_io_fix__dvdd     pad_n_3    (.DVDD(power_pad[25]));
-(* keep *) gf180mcu_ht_io_fix__dvss     pad_n_4    (.DVSS(power_pad[26]));
-(* keep *) gf180mcu_ht_io_fix__dvdd     pad_n_5    (.DVDD(power_pad[27]));
+(* keep *) gf180mcu_ht_io_fix__dvss     pad_n_2    (.DVSS(vss));
+(* keep *) gf180mcu_ht_io_fix__dvdd     pad_n_3    (.DVDD(vddio4));
+(* keep *) gf180mcu_ht_io_fix__dvss     pad_n_4    (.DVSS(vss));
+(* keep *) gf180mcu_ht_io_fix__dvdd     pad_n_5    (.DVDD(vddcore0));
 `else
 (* keep *) gf180mcu_ht_io_fix__dvss     pad_n_2    ();
 (* keep *) gf180mcu_ht_io_fix__dvdd     pad_n_3    ();
@@ -439,21 +389,21 @@ assign analog_pad[5] = ty;
 (* keep *) gf180mcu_fd_io__bi_24t   pad_n_10    (.PAD(digital_pad[46]), .Y(pt_bi_Y[1]), .A(pt_bi_A[1]), .OE(pt_bi_OE[1]), .IE(pt_bi_IE[1]), .SL(pt_bi_SL[1]), .CS(pt_bi_CS[1]), .PD(pt_bi_PD[1]), .PU(pt_bi_PU[1]));
 (* keep *) gf180mcu_fd_io__bi_24t   pad_n_11    (.PAD(digital_pad[47]), .Y(ty), .A(ta), .OE(toe), .IE(tie), .SL(pt_bi_SL[2]), .CS(pt_bi_CS[2]), .PD(pt_bi_PD[2]), .PU(pt_bi_PU[2]));
 `ifdef CONNECT_ANALOG_PADS
-(* keep *) gf180mcu_fd_io__asig_5p0 pad_n_12 (.ASIG5V(analog_pad[2]));
-(* keep *) gf180mcu_fd_io__asig_5p0 pad_n_13 (.ASIG5V(analog_pad[3]));
-(* keep *) gf180mcu_fd_io__asig_5p0 pad_n_14 (.ASIG5V(analog_pad[4]));
-(* keep *) gf180mcu_fd_io__asig_5p0 pad_n_15 (.ASIG5V(analog_pad[5]));
-`else
 (* keep *) gf180mcu_fd_io__asig_5p0 pad_n_12 (.ASIG5V(tie));
 (* keep *) gf180mcu_fd_io__asig_5p0 pad_n_13 (.ASIG5V(ta));
 (* keep *) gf180mcu_fd_io__asig_5p0 pad_n_14 (.ASIG5V(toe));
 (* keep *) gf180mcu_fd_io__asig_5p0 pad_n_15 (.ASIG5V(ty));
+`else
+(* keep *) gf180mcu_fd_io__asig_5p0 pad_n_12 ();
+(* keep *) gf180mcu_fd_io__asig_5p0 pad_n_13 ();
+(* keep *) gf180mcu_fd_io__asig_5p0 pad_n_14 ();
+(* keep *) gf180mcu_fd_io__asig_5p0 pad_n_15 ();
 `endif
 `ifdef CONNECT_POWER_PADS
-(* keep *) gf180mcu_ht_io_fix__dvss     pad_n_16   (.DVSS(power_pad[28]));
-(* keep *) gf180mcu_ht_io_fix__dvdd     pad_n_17   (.DVDD(power_pad[29]));
-(* keep *) gf180mcu_ht_io_fix__dvss     pad_n_18   (.DVSS(power_pad[30]));
-(* keep *) gf180mcu_ht_io_fix__dvdd     pad_n_19   (.DVDD(power_pad[31]));
+(* keep *) gf180mcu_ht_io_fix__dvss     pad_n_16   (.DVSS(vss));
+(* keep *) gf180mcu_ht_io_fix__dvdd     pad_n_17   (.DVDD(vddio0));
+(* keep *) gf180mcu_ht_io_fix__dvss     pad_n_18   (.DVSS(vss));
+(* keep *) gf180mcu_ht_io_fix__dvdd     pad_n_19   (.DVDD(vddcore1));
 `else
 (* keep *) gf180mcu_ht_io_fix__dvss     pad_n_16   ();
 (* keep *) gf180mcu_ht_io_fix__dvdd     pad_n_17   ();
