@@ -16,3 +16,11 @@ module gf180mcu_ht_io_fix__dvss (DVDD, DVSS, VDD);
 	supply0	DVSS;
 endmodule
 
+module gf180mcu_ht_io_fix__asig_5p0 (ASIG5V, DVDD, DVSS, VDD, VSS);
+	inout	ASIG5V;
+	inout	DVDD;
+	inout	DVSS;
+	inout	VDD;
+	inout	VSS;
+endmodule
+

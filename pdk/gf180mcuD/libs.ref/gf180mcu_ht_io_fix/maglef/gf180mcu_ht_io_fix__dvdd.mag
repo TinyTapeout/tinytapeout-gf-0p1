@@ -623,7 +623,7 @@ string LEFclass PAD POWER
 string LEFsite GF_IO_Site
 string LEFsymmetry X Y R90
 string LEFview TRUE
-string GDS_END 2240822
+string GDS_END 2778598
 string GDS_FILE $PDKPATH/libs.ref/gf180mcu_ht_io_fix/gds/gf180mcu_ht_io_fix.gds
-string GDS_START 2237034
+string GDS_START 2774810
 << end >>

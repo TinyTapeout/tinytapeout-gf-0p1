@@ -80,3 +80,10 @@ D20 DVSS DVDD diode_nd2ps_06v0 m=4.0 area=40e-12 pj=82e-6
 X21 DVDD DVSS cap_nmos_06v0 m=4.0 c_length=15e-6 c_width=15e-6
 .ENDS
 
+.SUBCKT gf180mcu_ht_io_fix__asig_5p0 ASIG5V DVDD DVSS VDD VSS
+D0 DVSS DVDD diode_nd2ps_06v0 m=4.0 area=40e-12 pj=82e-6
+X1 DVDD DVSS cap_nmos_06v0 m=36.0 c_length=15e-6 c_width=15e-6
+D2 DVSS ASIG5V diode_nd2ps_06v0 m=4.0 area=150e-12 pj=106e-6
+D3 ASIG5V DVDD diode_pd2nw_06v0 m=4.0 area=150e-12 pj=106e-6
+.ENDS
+

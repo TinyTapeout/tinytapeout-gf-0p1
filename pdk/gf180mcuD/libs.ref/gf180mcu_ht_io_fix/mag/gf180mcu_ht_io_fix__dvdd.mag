@@ -505,9 +505,9 @@ rlabel metal3 s 0 49200 200 50600 1 VSS
 port 3 nsew ground bidirectional
 << properties >>
 string FIXED_BBOX 0 0 15000 70000
-string GDS_END 2240822
+string GDS_END 2778598
 string GDS_FILE $PDKPATH/libs.ref/gf180mcu_ht_io_fix/gds/gf180mcu_ht_io_fix.gds
-string GDS_START 2237034
+string GDS_START 2774810
 string LEFclass PAD POWER
 string LEFsite GF_IO_Site
 string LEFsymmetry X Y R90
