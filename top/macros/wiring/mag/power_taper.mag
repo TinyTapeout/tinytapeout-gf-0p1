@@ -1,7 +1,7 @@
 magic
 tech gf180mcuD
 magscale 1 5
-timestamp 1757295289
+timestamp 1757356513
 << metal2 >>
 rect 3600 644 3628 672
 rect 3599 616 3629 644
@@ -27,4 +27,8 @@ rect 1899 84 5329 112
 rect 1415 56 5813 84
 rect 795 28 6433 56
 rect 0 0 7228 28
+use power_conn  power_conn_0
+timestamp 1757356272
+transform 1 0 -136 0 1 -35000
+box 136 34900 7364 35000
 << end >>

@@ -260,6 +260,39 @@ loopback loop_inst (
 tt_logo logo_inst (
 );
 
+wiring wiring_inst (
+    .vss_pad_s_2(vss),
+    .vss_pad_s_4(vss),
+    .vddcore0_pad_s_5(vddcore0),
+    .vss_pad_s_16(vss),
+    .vss_pad_s_18(vss),
+    .vddcore3_pad_s_19(vddcore3),
+    .vss_pad_e_2(vss),
+    .vss_pad_e_4(vss),
+    .vddcore0_pad_e_5(vddcore0),
+    .vss_pad_e_16(vss),
+    .vss_pad_e_18(vss),
+    .vddcore4_pad_e_19(vddcore4),
+    .vss_pad_n_2(vss),
+    .vss_pad_n_4(vss),
+    .vddcore0_pad_n_5(vddcore0),
+    .vss_pad_n_16(vss),
+    .vss_pad_n_18(vss),
+    .vddcore1_pad_n_19(vddcore1),
+    .vss_pad_w_2(vss),
+    .vss_pad_w_4(vss),
+    .vddcore0_pad_w_5(vddcore0),
+    .vss_pad_w_16(vss),
+    .vss_pad_w_18(vss),
+    .vddcore2_pad_w_19(vddcore2),
+    .loop_pad_s_6(loop1),
+    .loop_pad_s_7(loop2),
+    .tie_pad_n_12(tie),
+    .ta_pad_n_13(ta),
+    .toe_pad_n_14(toe),
+    .ty_pad_n_15(ty)
+);
+
 
 // IO_WEST
 (* keep *) gf180mcu_fd_io__bi_24t   pad_w_0     (.PAD(digital_pad[ 0]), .Y(hsig_Y[1]), .A(hsig_A[1]), .OE(hsig_OE[1]), .IE(hsig_IE[1]), .SL(hsig_SL[1]), .CS(hsig_CS[1]), .PD(hsig_PD[1]), .PU(hsig_PU[1]));
