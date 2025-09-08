@@ -169,6 +169,8 @@ if __name__ == '__main__':
         "dir::src/blackbox/tt_cell_macro_5.v",
         "dir::src/blackbox/tt_cell_macro_6.v",
         "dir::src/blackbox/tt_cell_macro_7.v",
+        "dir::src/blackbox/loopback.v",
+        "dir::src/blackbox/tt_logo.v",
     ]
 
     flow_cfg = {
@@ -191,6 +193,7 @@ if __name__ == '__main__':
             ("tt_cell_macro_7", "../cells/cell7", "cell_inst_7", 2063, 2334),
         ]), **extra_macro_config([
             ("loopback", "macros/loopback", "loop_inst", 1037.8, 380),
+            ("tt_logo", "macros/tt_logo", "logo_inst", 2334, 417),
         ])},
         "CLOCK_PORT": "digital_pad[2]",
         "CLOCK_PERIOD": 25,
@@ -212,6 +215,8 @@ if __name__ == '__main__':
         "IGNORE_DISCONNECTED_MODULES": [
             "gf180mcu_ht_io__brk5_vss_dvss",
             "gf180mcu_ht_io__brk5_vss_dvss_dvdd",
+            "loop_inst",
+            "logo_inst",
         ],
         "EXTRA_LIBS": [
             "pdk_dir::libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__tt_025C_5v00.lib",

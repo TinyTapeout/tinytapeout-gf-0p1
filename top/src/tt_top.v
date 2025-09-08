@@ -256,6 +256,10 @@ loopback loop_inst (
 `endif
 );
 
+(* keep *)
+tt_logo logo_inst (
+);
+
 
 // IO_WEST
 (* keep *) gf180mcu_fd_io__bi_24t   pad_w_0     (.PAD(digital_pad[ 0]), .Y(hsig_Y[1]), .A(hsig_A[1]), .OE(hsig_OE[1]), .IE(hsig_IE[1]), .SL(hsig_SL[1]), .CS(hsig_CS[1]), .PD(hsig_PD[1]), .PU(hsig_PU[1]));
