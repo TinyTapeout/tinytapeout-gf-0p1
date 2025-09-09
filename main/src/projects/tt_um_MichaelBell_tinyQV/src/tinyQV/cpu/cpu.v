@@ -3,7 +3,7 @@
    This CPU module interfaces with memory, the instruction decoder and the core.
  */
 
-module tinyqv_cpu #(parameter NUM_REGS=16, parameter REG_ADDR_BITS=4) (
+module p19_tinyqv_cpu #(parameter NUM_REGS=16, parameter REG_ADDR_BITS=4) (
     input clk,
     input rstn,
 
@@ -68,7 +68,7 @@ module tinyqv_cpu #(parameter NUM_REGS=16, parameter REG_ADDR_BITS=4) (
     wire [2:0] additional_mem_ops_de;
     wire mem_op_increment_reg_de;
 
-    tinyqv_decoder i_decoder(
+    p19_tinyqv_decoder i_decoder(
         instr, 
         imm_de,
 
@@ -293,7 +293,7 @@ module tinyqv_cpu #(parameter NUM_REGS=16, parameter REG_ADDR_BITS=4) (
             was_early_branch <= early_branch && !branch;
     end
 
-    tinyqv_core #(.REG_ADDR_BITS(REG_ADDR_BITS), .NUM_REGS(NUM_REGS))  i_core(
+    p19_tinyqv_core #(.REG_ADDR_BITS(REG_ADDR_BITS), .NUM_REGS(NUM_REGS))  i_core(
         clk,
         rstn,
         

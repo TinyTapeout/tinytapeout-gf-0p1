@@ -5,7 +5,7 @@
    simple control of SPI LCDs.
    */
 
-module spi_ctrl (
+module p19_spi_ctrl (
     input clk,
     input rstn,
 

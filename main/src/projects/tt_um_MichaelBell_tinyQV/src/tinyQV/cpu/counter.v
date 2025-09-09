@@ -1,6 +1,6 @@
 /* Counter register for TinyQV */
 
-module tinyqv_counter #(parameter OUTPUT_WIDTH=4) (
+module p19_tinyqv_counter #(parameter OUTPUT_WIDTH=4) (
     input clk,
     input rstn,
 

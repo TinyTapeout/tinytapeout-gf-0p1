@@ -6,7 +6,7 @@
 `define default_netname none
 
 // TinyQV CPU and QSPI memory controller wrapper
-module tinyQV (
+module p19_tinyQV (
     input clk,
     input rstn,
 
@@ -89,7 +89,7 @@ module tinyQV (
   reg rst_reg_n;
   always @(posedge clk) rst_reg_n <= rstn;
 
-  tinyqv_cpu cpu(
+  p19_tinyqv_cpu cpu(
         .clk(clk),
         .rstn(rst_reg_n),
 
@@ -125,7 +125,7 @@ module tinyQV (
         .debug_rd(debug_rd)
     );
 
-  tinyqv_mem_ctrl mem(
+  p19_tinyqv_mem_ctrl mem(
         .clk(clk),
         .rstn(rstn),
 

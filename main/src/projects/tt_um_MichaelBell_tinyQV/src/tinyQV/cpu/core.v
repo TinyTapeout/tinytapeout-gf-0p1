@@ -3,7 +3,7 @@
    This core module takes decoded instructions and produces output data
  */
 
-module tinyqv_core #(parameter NUM_REGS=16, parameter REG_ADDR_BITS=4) (
+module p19_tinyqv_core #(parameter NUM_REGS=16, parameter REG_ADDR_BITS=4) (
     input clk,
     input rstn,
 
@@ -86,7 +86,7 @@ module tinyqv_core #(parameter NUM_REGS=16, parameter REG_ADDR_BITS=4) (
 
     reg [31:0] tmp_data;
 
-    tinyqv_registers #(.REG_ADDR_BITS(REG_ADDR_BITS), .NUM_REGS(NUM_REGS)) 
+    p19_tinyqv_registers #(.REG_ADDR_BITS(REG_ADDR_BITS), .NUM_REGS(NUM_REGS)) 
         i_registers(clk, rstn, wr_en, counter, rs1, rs2, rd, data_rs1, data_rs2, data_rd, return_addr);
 
 
@@ -111,7 +111,7 @@ module tinyqv_core #(parameter NUM_REGS=16, parameter REG_ADDR_BITS=4) (
     wire cmp_in = (counter == 0) ? 1'b1 : cmp;
     wire cy_out, cmp_out;
 
-    tinyqv_alu i_alu(alu_op_in, alu_a_in, alu_b_in, cy_in, cmp_in, alu_out, cy_out, cmp_out);
+    p19_tinyqv_alu i_alu(alu_op_in, alu_a_in, alu_b_in, cy_in, cmp_in, alu_out, cy_out, cmp_out);
 
     always @(posedge clk) begin
         cy <= cy_out;
@@ -129,13 +129,13 @@ module tinyqv_core #(parameter NUM_REGS=16, parameter REG_ADDR_BITS=4) (
     end
 
     wire [3:0] shift_out;
-    tinyqv_shifter i_shift(alu_op[3:2], counter, tmp_data, shift_amt, shift_out);
+    p19_tinyqv_shifter i_shift(alu_op[3:2], counter, tmp_data, shift_amt, shift_out);
 
 
     ///////// Multiplier /////////
 
     wire [3:0] mul_out;
-    tinyqv_mul #(.B_BITS(16)) multiplier(clk, data_rs1 & {4{cycle[0]}}, tmp_data[15:0], mul_out);
+    p19_tinyqv_mul #(.B_BITS(16)) multiplier(clk, data_rs1 & {4{cycle[0]}}, tmp_data[15:0], mul_out);
 
 
     ///////// Writeback /////////
@@ -274,7 +274,7 @@ module tinyqv_core #(parameter NUM_REGS=16, parameter REG_ADDR_BITS=4) (
 
     wire [6:0] cycle_count_wide;
     wire cycle_cy;
-    tinyqv_counter #(.OUTPUT_WIDTH(7)) i_cycles (
+    p19_tinyqv_counter #(.OUTPUT_WIDTH(7)) i_cycles (
         .clk(clk),
         .rstn(rstn),
         .add(1'b1),
@@ -298,7 +298,7 @@ module tinyqv_core #(parameter NUM_REGS=16, parameter REG_ADDR_BITS=4) (
         instr_retired <= instr_complete && !is_stall;
     end
     /* verilator lint_off PINMISSING */  // No carry
-    tinyqv_counter i_instrret (
+    p19_tinyqv_counter i_instrret (
         .clk(clk),
         .rstn(rstn),
         .add(instr_retired),

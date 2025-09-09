@@ -31,7 +31,7 @@
    - 2-5: read the data delayed by further half SPI clock cycles. 
 
    */
-module qspi_controller (
+module p19_qspi_controller (
     input clk,
     input rstn,
 

@@ -3,7 +3,7 @@
     Note parts of this are from the excellent FemtoRV by Bruno Levy et al.
 */
 
-module tinyqv_decoder #(parameter REG_ADDR_BITS=4) (
+module p19_tinyqv_decoder #(parameter REG_ADDR_BITS=4) (
     input [31:0] instr,
 
     output reg [31:0] imm,

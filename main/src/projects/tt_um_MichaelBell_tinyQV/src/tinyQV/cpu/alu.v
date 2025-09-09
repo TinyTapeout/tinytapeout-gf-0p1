@@ -22,7 +22,7 @@
       1111 CZERO.nez
 */
 
-module tinyqv_alu (
+module p19_tinyqv_alu (
     input [3:0] op,
     input [3:0] a,
     input [3:0] b,
@@ -58,7 +58,7 @@ module tinyqv_alu (
 
 endmodule
 
-module tinyqv_shifter (
+module p19_tinyqv_shifter (
     input [3:2] op,
     input [2:0] counter,
     input [31:0] a,
@@ -92,7 +92,7 @@ module tinyqv_shifter (
 
 endmodule
 
-module tinyqv_mul #(parameter B_BITS=16) (
+module p19_tinyqv_mul #(parameter B_BITS=16) (
     input clk,
 
     input [3:0] a,

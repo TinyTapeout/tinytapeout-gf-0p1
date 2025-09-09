@@ -9,7 +9,7 @@
 // - UART transmitter module.
 //
 
-module uart_tx #(parameter 
+module p19_uart_tx #(parameter 
     BIT_RATE     = 9600,       // Input bit rate of the UART line, bits / sec
     CLK_HZ       = 50_000_000, // Clock frequency in hertz.
     PAYLOAD_BITS = 8,          // Number of data bits sent per UART packet.

@@ -3,7 +3,7 @@
    This memory controller plumbs the outputs from the CPU into the Flash and RAM controllers
  */
 
-module tinyqv_mem_ctrl (
+module p19_tinyqv_mem_ctrl (
     input clk,
     input rstn,
 
@@ -109,7 +109,7 @@ module tinyqv_mem_ctrl (
     end
 
     wire [1:0] write_qspi_data_byte_idx = qspi_data_byte_idx + (qspi_data_req ? 2'b01 : 2'b00);
-    qspi_controller q_ctrl(
+    p19_qspi_controller q_ctrl(
         clk,
         rstn,
 

@@ -7,7 +7,7 @@
     The read bit address is one ahead of write bit address, and both increment every clock.
  */
 
-module tinyqv_registers #(parameter NUM_REGS=16, parameter REG_ADDR_BITS=4) (
+module p19_tinyqv_registers #(parameter NUM_REGS=16, parameter REG_ADDR_BITS=4) (
     input clk,
     input rstn,
 

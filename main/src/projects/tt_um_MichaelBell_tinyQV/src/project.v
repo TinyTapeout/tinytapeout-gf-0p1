@@ -124,7 +124,7 @@ module tt_um_MichaelBell_tinyQV (
     end
     wire [3:0] interrupt_req = {!uart_tx_busy, uart_rx_valid, ui_in_reg[1:0]};
 
-    tinyQV i_tinyqv(
+    p19_tinyQV i_tinyqv(
         .clk(clk),
         .rstn(rst_reg_n),
 
@@ -211,7 +211,7 @@ module tt_um_MichaelBell_tinyQV (
         end
     end
 
-    uart_tx #(.CLK_HZ(64_000_000), .BIT_RATE(115_200)) i_uart_tx(
+    p19_uart_tx #(.CLK_HZ(64_000_000), .BIT_RATE(115_200)) i_uart_tx(
         .clk(clk),
         .resetn(rst_reg_n),
         .uart_txd(uart_txd),
@@ -220,7 +220,7 @@ module tt_um_MichaelBell_tinyQV (
         .uart_tx_busy(uart_tx_busy) 
     );
 
-    uart_rx #(.CLK_HZ(64_000_000), .BIT_RATE(115_200)) i_uart_rx(
+    p19_uart_rx #(.CLK_HZ(64_000_000), .BIT_RATE(115_200)) i_uart_rx(
         .clk(clk),
         .resetn(rst_reg_n),
         .uart_rxd(uart_rxd),
@@ -230,7 +230,7 @@ module tt_um_MichaelBell_tinyQV (
         .uart_rx_data(uart_rx_data) 
     );
 
-    uart_tx #(.CLK_HZ(64_000_000), .BIT_RATE(4_000_000)) i_debug_uart_tx(
+    p19_uart_tx #(.CLK_HZ(64_000_000), .BIT_RATE(4_000_000)) i_debug_uart_tx(
         .clk(clk),
         .resetn(rst_reg_n),
         .uart_txd(debug_uart_txd),
@@ -239,7 +239,7 @@ module tt_um_MichaelBell_tinyQV (
         .uart_tx_busy(debug_uart_tx_busy) 
     );
 
-    spi_ctrl i_spi(
+    p19_spi_ctrl i_spi(
         .clk(clk),
         .rstn(rst_reg_n),
 

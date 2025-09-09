@@ -14,7 +14,7 @@
    endian order, i.e. the byte with the lowest address is aligned to 
    the MSB of the word. 
    */
-module qspi_flash_controller #(parameter DATA_WIDTH_BYTES=2, parameter ADDR_BITS=24) (
+module p19_qspi_flash_controller #(parameter DATA_WIDTH_BYTES=2, parameter ADDR_BITS=24) (
     input clk,
     input rstn,
 

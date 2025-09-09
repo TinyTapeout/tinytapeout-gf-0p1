@@ -4,7 +4,7 @@
    A very simple 8-bit PWM peripheral
    */
 
-module pwm_ctrl (
+module p19_pwm_ctrl (
     input clk,
     input rstn,
 
