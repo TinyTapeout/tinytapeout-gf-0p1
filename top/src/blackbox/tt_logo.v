@@ -2,6 +2,7 @@
 
 (* blackbox *)
 module tt_logo (
+    inout wire dummy
 );
 
 endmodule

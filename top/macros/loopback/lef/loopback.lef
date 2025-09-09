@@ -3,7 +3,7 @@ VERSION 5.7 ;
   DIVIDERCHAR "/" ;
   BUSBITCHARS "[]" ;
 MACRO loopback
-  CLASS BLOCK ;
+  CLASS COVER ;
   FOREIGN loopback ;
   ORIGIN 0.000 0.000 ;
   SIZE 100.380 BY 0.380 ;

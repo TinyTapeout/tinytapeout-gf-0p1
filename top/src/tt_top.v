@@ -256,8 +256,9 @@ loopback loop_inst (
 `endif
 );
 
-(* keep *)
+wire logo_dummy;
 tt_logo logo_inst (
+    .dummy(logo_dummy)
 );
 
 wiring wiring_inst (
