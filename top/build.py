@@ -89,7 +89,7 @@ class TopFlow(SequentialFlow):
         ##OpenROAD.IRDropReport,
         Magic.StreamOut,
         KLayout.StreamOut,
-        #Magic.WriteLEF,
+        Magic.WriteLEF,
         #Odb.CheckDesignAntennaProperties,
         KLayout.XOR,
         Checker.XOR,
