@@ -3,7 +3,10 @@
 # Based on https://github.com/TinyTapeout/tt-multiplexer/blob/ihp2025/ol2/tt_top/build.py by Sylvain Munaut
 
 import os
+import sys
 
+import librelane
+from librelane.container import run_in_container
 from librelane.common import Path
 from librelane.flows import Flow
 from librelane.flows.sequential import SequentialFlow
@@ -157,6 +160,18 @@ if __name__ == '__main__':
 
     PDK_ROOT = os.getenv('PDK_ROOT')
     PDK = 'gf180mcuD'
+
+    if "--no-container" not in sys.argv:
+        container_image = f"ghcr.io/librelane/librelane:{librelane.__version__}"
+        extended_argv = sys.argv + ["--no-container"]
+        tty = True
+        run_in_container(
+            container_image,
+            extended_argv,
+            pdk_root=PDK_ROOT,
+            other_mounts=(),
+            tty=tty)
+        exit()
 
     sources = [
         "dir::src/tt_top.v",
