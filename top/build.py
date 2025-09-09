@@ -100,7 +100,7 @@ class TopFlow(SequentialFlow):
         Magic.SpiceExtraction,
         Checker.IllegalOverlap,
         Netgen.LVS,
-        ##Checker.LVS,
+        Checker.LVS,
         #Yosys.EQY,
         #Checker.SetupViolations,
         #Checker.HoldViolations,
@@ -220,6 +220,7 @@ if __name__ == '__main__':
             "loopback",
             "tt_logo",
         ],
+        "MAGIC_NO_EXT_UNIQUE": True,
         "EXTRA_LIBS": [
             "pdk_dir::libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__tt_025C_5v00.lib",
             "pdk_dir::libs.ref/gf180mcu_ht_io_fix/lib/gf180mcu_ht_io_fix__tt_025C_5v00.lib",

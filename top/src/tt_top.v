@@ -3,7 +3,10 @@
 module tt_top (
 `ifdef CONNECT_POWER_PADS
     inout wire vss,
-    inout wire vddio0,
+    inout wire vddio0w,
+    inout wire vddio0s,
+    inout wire vddio0e,
+    inout wire vddio0n,
     inout wire vddio1,
     inout wire vddio2,
     inout wire vddio3,
@@ -321,7 +324,7 @@ wiring wiring_inst (
 (* keep *) gf180mcu_fd_io__in_c     pad_w_15    (.PAD(digital_pad[11]), .Y(tt_in_Y[ 8]), .PD(tt_in_PD[ 8]), .PU(tt_in_PU[ 8]));
 `ifdef CONNECT_POWER_PADS
 (* keep *) gf180mcu_ht_io_fix__dvss     pad_w_16   (.DVSS(vss));
-(* keep *) gf180mcu_ht_io_fix__dvdd     pad_w_17   (.DVDD(vddio0));
+(* keep *) gf180mcu_ht_io_fix__dvdd     pad_w_17   (.DVDD(vddio0w));
 (* keep *) gf180mcu_ht_io_fix__dvss     pad_w_18   (.DVSS(vss));
 (* keep *) gf180mcu_ht_io_fix__dvdd     pad_w_19   (.DVDD(vddcore2));
 `else
@@ -364,7 +367,7 @@ wiring wiring_inst (
 (* keep *) gf180mcu_fd_io__bi_24t   pad_s_15    (.PAD(digital_pad[23]), .Y(tt_bi_Y[ 7]), .A(tt_bi_A[ 7]), .OE(tt_bi_OE[ 7]), .IE(tt_bi_IE[ 7]), .SL(tt_bi_SL[ 7]), .CS(tt_bi_CS[ 7]), .PD(tt_bi_PD[ 7]), .PU(tt_bi_PU[ 7]));
 `ifdef CONNECT_POWER_PADS
 (* keep *) gf180mcu_ht_io_fix__dvss     pad_s_16   (.DVSS(vss));
-(* keep *) gf180mcu_ht_io_fix__dvdd     pad_s_17   (.DVDD(vddio0));
+(* keep *) gf180mcu_ht_io_fix__dvdd     pad_s_17   (.DVDD(vddio0s));
 (* keep *) gf180mcu_ht_io_fix__dvss     pad_s_18   (.DVSS(vss));
 (* keep *) gf180mcu_ht_io_fix__dvdd     pad_s_19   (.DVDD(vddcore3));
 `else
@@ -402,7 +405,7 @@ wiring wiring_inst (
 (* keep *) gf180mcu_fd_io__in_c     pad_e_15    (.PAD(digital_pad[37]), .Y(tt_in_Y[10]), .PD(tt_in_PD[10]), .PU(tt_in_PU[10]));
 `ifdef CONNECT_POWER_PADS
 (* keep *) gf180mcu_ht_io_fix__dvss     pad_e_16   (.DVSS(vss));
-(* keep *) gf180mcu_ht_io_fix__dvdd     pad_e_17   (.DVDD(vddio0));
+(* keep *) gf180mcu_ht_io_fix__dvdd     pad_e_17   (.DVDD(vddio0e));
 (* keep *) gf180mcu_ht_io_fix__dvss     pad_e_18   (.DVSS(vss));
 (* keep *) gf180mcu_ht_io_fix__dvdd     pad_e_19   (.DVDD(vddcore4));
 `else
@@ -447,7 +450,7 @@ wiring wiring_inst (
 `endif
 `ifdef CONNECT_POWER_PADS
 (* keep *) gf180mcu_ht_io_fix__dvss     pad_n_16   (.DVSS(vss));
-(* keep *) gf180mcu_ht_io_fix__dvdd     pad_n_17   (.DVDD(vddio0));
+(* keep *) gf180mcu_ht_io_fix__dvdd     pad_n_17   (.DVDD(vddio0n));
 (* keep *) gf180mcu_ht_io_fix__dvss     pad_n_18   (.DVSS(vss));
 (* keep *) gf180mcu_ht_io_fix__dvdd     pad_n_19   (.DVDD(vddcore1));
 `else
