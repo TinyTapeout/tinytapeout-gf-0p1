@@ -134,7 +134,7 @@ if __name__ == '__main__':
 
     flow_cfg = {
         "PL_TARGET_DENSITY_PCT": 60,
-        "CLOCK_PERIOD": 25,
+        "CLOCK_PERIOD": 10,
         "PL_RESIZER_HOLD_SLACK_MARGIN": 0.5,
         "PL_RESIZER_HOLD_MAX_BUFFER_PCT": 100,
         "GRT_RESIZER_HOLD_SLACK_MARGIN": 0.25,
