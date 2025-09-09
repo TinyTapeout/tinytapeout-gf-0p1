@@ -69,7 +69,7 @@ project_sources = [
          'raybox-zero/pov.v', 'raybox-zero/lzc.v', 'raybox-zero/reciprocal.v', 'raybox-zero/wall_tracer.v',
          'raybox-zero/row_render.v', 'raybox-zero/vga_mux.v', 'raybox-zero/vga_sync.v', 'raybox-zero/top_raybox_zero_fsm.v']),
     (23, 'tt_um_kianV_rv32ima_uLinux_SoC',
-        ['spi.v', 'divider.v', 'rx_uart.v', 'defines_soc.vh', 'csr_exception_handler.v', 'riscv_defines.vh',
+        ['spi.v', 'gpio.v', 'divider.v', 'rx_uart.v', 'defines_soc.vh', 'csr_exception_handler.v', 'riscv_defines.vh',
          'rv32_amo_opcodes.vh', 'design_elements.v', 'fifo.v', 'mcause.vh', 'soc.v', 'alu_decoder.v', 'datapath_unit.v',
          'extend.v', 'load_alignment.v', 'alu.v', 'csr_utilities.vh', 'qqspi.v', 'load_decoder.v',
          'riscv_priv_csr_status.vh', 'multiplier_decoder.v', 'csr_decoder.v', 'clint.v', 'register_file.v', 'misa.vh',

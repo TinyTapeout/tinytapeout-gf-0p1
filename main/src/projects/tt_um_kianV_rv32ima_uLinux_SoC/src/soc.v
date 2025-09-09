@@ -43,6 +43,10 @@ module p23_soc (
     input  wire spi_sio1_so_miso0,
     output wire spi_sio0_si_mosi0,
 
+    input wire [7:0] gpio_ui_in,
+    output wire [7:0] gpio_uo_out,
+    output wire [7:0] gpio_uo_en,
+
     output wire [3:0] sio_oe,
 
     input wire rst_n
@@ -96,6 +100,11 @@ module p23_soc (
   wire [31:0] spi_mem_data0;
   wire        spi_mem_valid0;
   wire        spi_mem_ready0;
+
+  // GPIO interface
+  wire [31:0] gpio_mem_data0;
+  wire        gpio_mem_valid0;
+  wire        gpio_mem_ready0;
 
 
   // divider
@@ -163,9 +172,13 @@ module p23_soc (
 
   // PSRAM
   wire mem_sdram_valid;
+  wire mem_sdram_low_bank_sel;
+  wire mem_sdram_high_bank_sel;
 
   wire is_sdram = (cpu_mem_addr >= `SDRAM_MEM_ADDR_START && cpu_mem_addr < `SDRAM_MEM_ADDR_END);
   assign mem_sdram_valid = !qqspi_mem_ready && cpu_mem_valid && is_sdram;
+  assign mem_sdram_low_bank_sel = (is_sdram && cpu_mem_addr < `SDRAM_MEM_ADDR_START + `SDRAM_BANK_SIZE);
+  assign mem_sdram_high_bank_sel = (is_sdram && ~mem_sdram_low_bank_sel);
 
   /////////////////////////////////////////////////////////////////////////////
 
@@ -196,7 +209,7 @@ module p23_soc (
       .sio3_o        (sio3_o),
       .sio_oe        (sio_oe),
 
-      .ce_ctrl({1'b0, mem_sdram_valid, spi_nor_mem_valid}),
+      .ce_ctrl({mem_sdram_valid & mem_sdram_high_bank_sel, mem_sdram_valid & mem_sdram_low_bank_sel, spi_nor_mem_valid}),
       .ce(ce),
 
       .clk   (clk),
@@ -282,6 +295,27 @@ module p23_soc (
   );
   /////////////////////////////////////////////////////////////////////////////
 
+  /////////////////////////////////////////////////////////////////////////////
+  // GPIO
+
+  assign gpio_mem_valid0 = !gpio_mem_ready0 && cpu_mem_valid &&
+           (cpu_mem_addr == `KIANV_GPIO_UO_EN || cpu_mem_addr == `KIANV_GPIO_UO_OUT || cpu_mem_addr == `KIANV_GPIO_UI_IN);
+  p23_gpio gpio0_I (
+      .clk   (clk),
+      .resetn(resetn),
+      .addr  (cpu_mem_addr),
+      .rdata (gpio_mem_data0),
+      .wdata (cpu_mem_wdata),
+      .wstrb (cpu_mem_wstrb),
+      .valid (gpio_mem_valid0),
+      .ready (gpio_mem_ready0),
+
+      .ui_in(gpio_ui_in),
+      .uo_out(gpio_uo_out),
+      .uo_en(gpio_uo_en)
+  );
+  /////////////////////////////////////////////////////////////////////////////
+
   wire IRQ3;
   wire IRQ7;
   wire clint_valid;
@@ -305,7 +339,7 @@ module p23_soc (
 
   /////////////////////////////////////////////////////////////////////////////
   wire is_io = (cpu_mem_addr >= 32'h10_000_000 && cpu_mem_addr <= 32'h12_000_000);
-  wire unmatched_io = !(uart_lsr_valid_rd || uart_tx_valid || uart_rx_valid || clint_valid || div_valid || spi_div_valid || spi_mem_valid0);
+  wire unmatched_io = !(uart_lsr_valid_rd || uart_tx_valid || uart_rx_valid || clint_valid || div_valid || spi_div_valid || spi_mem_valid0 || gpio_mem_valid0);
   wire access_fault = cpu_mem_valid & (!is_io || !is_sdram);
 
   p23_kianv_harris_mc_edition #(
@@ -358,6 +392,9 @@ module p23_soc (
         io_ready = 1'b1;
       end else if (spi_mem_ready0) begin
         io_rdata = spi_mem_data0;
+        io_ready = 1'b1;
+      end else if (gpio_mem_ready0) begin
+        io_rdata = gpio_mem_data0;
         io_ready = 1'b1;
       end else if (unmatched_io) begin
         io_rdata = 0;
