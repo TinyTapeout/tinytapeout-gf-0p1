@@ -28,7 +28,6 @@ if __name__ == '__main__':
     flow_cfg = {
         "STD_CELL_LIBRARY": "gf180mcu_as_sc_mcu7t3v3",
         "STA_CORNERS": ["nom_tt_025C_3v30"],
-        "RUN_CVC": False,
         "EXTRA_GDS_FILES": [f"{PDK_ROOT}/{PDK}/libs.ref/gf180mcu_as_sc_mcu7t3v3/gf180mcu_as_sc_mcu7t3v3__merged.gds"],
 
         "PL_TARGET_DENSITY_PCT": 60,

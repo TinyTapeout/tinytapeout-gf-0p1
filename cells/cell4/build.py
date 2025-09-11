@@ -28,8 +28,6 @@ if __name__ == '__main__':
     flow_cfg = {
         "STD_CELL_LIBRARY": "gf180mcu_osu_sc_gp9t3v3",
         "STA_CORNERS": ["nom_tt_025C_3v30"],
-        "RUN_CVC": False,
-        "RUN_MAGIC_DRC": False,
         "GRT_REPAIR_ANTENNAS": False,
         "RUN_HEURISTIC_DIODE_INSERTION": False,
 
