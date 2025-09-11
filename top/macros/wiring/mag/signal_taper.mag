@@ -25,8 +25,4 @@ rect 1164 84 3268 112
 rect 868 56 3564 84
 rect 488 28 3944 56
 rect 0 0 4432 28
-use signal_conn  signal_conn_0
-timestamp 1757356153
-transform 1 0 -1534 0 1 -35000
-box 1534 34900 5966 35000
 << end >>

@@ -1,12 +1,17 @@
 magic
 tech gf180mcuD
 magscale 1 5
+timestamp 1757618869
+use power_pad_pin  power_pad_pin_0
 timestamp 1757356272
-<< metal2 >>
-rect 136 34900 1086 35000
-rect 1376 34900 2401 35000
-rect 2561 34900 3586 35000
-rect 3914 34900 4939 35000
-rect 5099 34900 6124 35000
-rect 6414 34900 7364 35000
+transform 1 0 -136 0 1 -35000
+box 136 34900 7364 35000
+use power_stub  power_stub_0
+timestamp 1757618779
+transform 1 0 0 0 1 0
+box 0 0 7228 800
+use power_taper  power_taper_0
+timestamp 1757356513
+transform 1 0 0 0 1 800
+box 0 0 7228 672
 << end >>

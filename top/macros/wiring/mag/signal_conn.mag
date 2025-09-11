@@ -1,14 +1,17 @@
 magic
 tech gf180mcuD
-magscale 1 10
+magscale 1 5
+timestamp 1757618907
+use signal_pad_pin  signal_pad_pin_0
 timestamp 1757356153
-<< metal2 >>
-rect 3068 69800 3576 70000
-rect 4204 69800 4712 70000
-rect 5340 69800 5848 70000
-rect 6476 69800 6984 70000
-rect 8016 69800 8524 70000
-rect 9152 69800 9660 70000
-rect 10288 69800 10796 70000
-rect 11424 69800 11932 70000
+transform 1 0 -1534 0 1 -35000
+box 1534 34900 5966 35000
+use signal_stub  signal_stub_0
+timestamp 1757618801
+transform 1 0 0 0 1 0
+box 0 0 4432 800
+use signal_taper  signal_taper_0
+timestamp 1757356446
+transform 1 0 0 0 1 800
+box 0 0 4432 616
 << end >>
