@@ -98,7 +98,7 @@ enabled_projects = {
     'tt_um_uwuifier',
     'tt_um_urish_usb_cdc',
     'tt_um_robojan_top',
-    'tt_um_MichaelBell_nanoV',
+    'tt_um_MichaelBell_tinyQV',
     'tt_um_dinogame',
     'tt_um_no_time_for_squares_tommythorn',
     'tt_um_algofoogle_raybox_zero',
