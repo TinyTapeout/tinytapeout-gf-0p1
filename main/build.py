@@ -134,11 +134,9 @@ if __name__ == '__main__':
 
     flow_cfg = {
         "PL_TARGET_DENSITY_PCT": 60,
-        "CLOCK_PERIOD": 10,
-        "PL_RESIZER_HOLD_SLACK_MARGIN": 0.5,
-        "PL_RESIZER_HOLD_MAX_BUFFER_PCT": 100,
-        "GRT_RESIZER_HOLD_SLACK_MARGIN": 0.25,
-        "GRT_RESIZER_HOLD_MAX_BUFFER_PCT": 100,
+        "CLOCK_PERIOD": 60,
+        "PL_RESIZER_HOLD_SLACK_MARGIN": 0.1,
+        "GRT_RESIZER_HOLD_SLACK_MARGIN": 0.05,
         "RUN_LINTER": True,
         "LINTER_INCLUDE_PDK_MODELS": True,
         "CLOCK_PORT": "tt_clk_Y",
@@ -172,7 +170,7 @@ if __name__ == '__main__':
         "DIE_AREA": [0, 0, 1600.00, 1600.00],
         "CORE_AREA": [25.00, 25.00, 1575.00, 1575.00],
         "FP_PIN_ORDER_CFG": "dir::pin_order.cfg",
-        "FALLBACK_SDC_FILE": "dir::base.sdc",  # FIXME: seems to disable all paths
+        "FALLBACK_SDC_FILE": "dir::base.sdc",
         "SYNTH_LATCH_MAP": "dir::latch_map.v",
     }
 
