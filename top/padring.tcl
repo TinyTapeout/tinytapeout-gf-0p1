@@ -144,33 +144,33 @@ place_pad -row IO_NORTH -location [calc_horizontal_pad_location  2] {pad_n_19} -
 place_pad -row IO_NORTH -location [calc_horizontal_pad_location  1] {pad_n_20} -master gf180mcu_fd_io__bi_24t
 place_pad -row IO_NORTH -location [calc_horizontal_pad_location  0] {pad_n_21} -master gf180mcu_fd_io__in_c
 
-place_pad -row IO_WEST -location [expr {[calc_vertical_pad_location 19] + $IO_WIDTH}] {breaker_w_0} -master gf180mcu_ht_io__brk5_vss_vdd_dvss
+place_pad -row IO_WEST -location [expr {[calc_vertical_pad_location 19] + $IO_WIDTH}] {breaker_w_0} -master gf180mcu_ht_io__brk5_vss_dvss_dvdd
 place_pad -row IO_WEST -location [expr {[calc_vertical_pad_location 17] + $IO_WIDTH}] {breaker_w_1} -master gf180mcu_ht_io__brk5_vss_dvss
-place_pad -row IO_WEST -location [expr {[calc_vertical_pad_location 15] + $IO_WIDTH}] {breaker_w_2} -master gf180mcu_ht_io__brk5_vss_dvss_dvdd
-place_pad -row IO_WEST -location [expr {[calc_vertical_pad_location  5] + $IO_WIDTH}] {breaker_w_3} -master gf180mcu_ht_io__brk5_vss_vdd_dvss
+place_pad -row IO_WEST -location [expr {[calc_vertical_pad_location 15] + $IO_WIDTH}] {breaker_w_2} -master gf180mcu_ht_io__brk5_vss_vdd_dvss
+place_pad -row IO_WEST -location [expr {[calc_vertical_pad_location  5] + $IO_WIDTH}] {breaker_w_3} -master gf180mcu_ht_io__brk5_vss_dvss_dvdd
 place_pad -row IO_WEST -location [expr {[calc_vertical_pad_location  3] + $IO_WIDTH}] {breaker_w_4} -master gf180mcu_ht_io__brk5_vss_dvss
-place_pad -row IO_WEST -location [expr {[calc_vertical_pad_location  1] + $IO_WIDTH}] {breaker_w_5} -master gf180mcu_ht_io__brk5_vss_dvss_dvdd
+place_pad -row IO_WEST -location [expr {[calc_vertical_pad_location  1] + $IO_WIDTH}] {breaker_w_5} -master gf180mcu_ht_io__brk5_vss_vdd_dvss
 
-place_pad -row IO_SOUTH -location [expr {[calc_horizontal_pad_location  1] + $IO_WIDTH}] {breaker_s_0} -master gf180mcu_ht_io__brk5_vss_vdd_dvss
+place_pad -row IO_SOUTH -location [expr {[calc_horizontal_pad_location  1] + $IO_WIDTH}] {breaker_s_0} -master gf180mcu_ht_io__brk5_vss_dvss_dvdd
 place_pad -row IO_SOUTH -location [expr {[calc_horizontal_pad_location  3] + $IO_WIDTH}] {breaker_s_1} -master gf180mcu_ht_io__brk5_vss_dvss
-place_pad -row IO_SOUTH -location [expr {[calc_horizontal_pad_location  5] + $IO_WIDTH}] {breaker_s_2} -master gf180mcu_ht_io__brk5_vss_dvss_dvdd
-place_pad -row IO_SOUTH -location [expr {[calc_horizontal_pad_location 15] + $IO_WIDTH}] {breaker_s_3} -master gf180mcu_ht_io__brk5_vss_vdd_dvss
+place_pad -row IO_SOUTH -location [expr {[calc_horizontal_pad_location  5] + $IO_WIDTH}] {breaker_s_2} -master gf180mcu_ht_io__brk5_vss_vdd_dvss
+place_pad -row IO_SOUTH -location [expr {[calc_horizontal_pad_location 15] + $IO_WIDTH}] {breaker_s_3} -master gf180mcu_ht_io__brk5_vss_dvss_dvdd
 place_pad -row IO_SOUTH -location [expr {[calc_horizontal_pad_location 17] + $IO_WIDTH}] {breaker_s_4} -master gf180mcu_ht_io__brk5_vss_dvss
-place_pad -row IO_SOUTH -location [expr {[calc_horizontal_pad_location 19] + $IO_WIDTH}] {breaker_s_5} -master gf180mcu_ht_io__brk5_vss_dvss_dvdd
+place_pad -row IO_SOUTH -location [expr {[calc_horizontal_pad_location 19] + $IO_WIDTH}] {breaker_s_5} -master gf180mcu_ht_io__brk5_vss_vdd_dvss
 
-place_pad -row IO_EAST -location [expr {[calc_vertical_pad_location  1] + $IO_WIDTH}] {breaker_e_0} -master gf180mcu_ht_io__brk5_vss_vdd_dvss
+place_pad -row IO_EAST -location [expr {[calc_vertical_pad_location  1] + $IO_WIDTH}] {breaker_e_0} -master gf180mcu_ht_io__brk5_vss_dvss_dvdd
 place_pad -row IO_EAST -location [expr {[calc_vertical_pad_location  3] + $IO_WIDTH}] {breaker_e_1} -master gf180mcu_ht_io__brk5_vss_dvss
-place_pad -row IO_EAST -location [expr {[calc_vertical_pad_location  5] + $IO_WIDTH}] {breaker_e_2} -master gf180mcu_ht_io__brk5_vss_dvss_dvdd
-place_pad -row IO_EAST -location [expr {[calc_vertical_pad_location 15] + $IO_WIDTH}] {breaker_e_3} -master gf180mcu_ht_io__brk5_vss_vdd_dvss
+place_pad -row IO_EAST -location [expr {[calc_vertical_pad_location  5] + $IO_WIDTH}] {breaker_e_2} -master gf180mcu_ht_io__brk5_vss_vdd_dvss
+place_pad -row IO_EAST -location [expr {[calc_vertical_pad_location 15] + $IO_WIDTH}] {breaker_e_3} -master gf180mcu_ht_io__brk5_vss_dvss_dvdd
 place_pad -row IO_EAST -location [expr {[calc_vertical_pad_location 17] + $IO_WIDTH}] {breaker_e_4} -master gf180mcu_ht_io__brk5_vss_dvss
-place_pad -row IO_EAST -location [expr {[calc_vertical_pad_location 19] + $IO_WIDTH}] {breaker_e_5} -master gf180mcu_ht_io__brk5_vss_dvss_dvdd
+place_pad -row IO_EAST -location [expr {[calc_vertical_pad_location 19] + $IO_WIDTH}] {breaker_e_5} -master gf180mcu_ht_io__brk5_vss_vdd_dvss
 
-place_pad -row IO_NORTH -location [expr {[calc_horizontal_pad_location 19] + $IO_WIDTH}] {breaker_n_0} -master gf180mcu_ht_io__brk5_vss_vdd_dvss
+place_pad -row IO_NORTH -location [expr {[calc_horizontal_pad_location 19] + $IO_WIDTH}] {breaker_n_0} -master gf180mcu_ht_io__brk5_vss_dvss_dvdd
 place_pad -row IO_NORTH -location [expr {[calc_horizontal_pad_location 17] + $IO_WIDTH}] {breaker_n_1} -master gf180mcu_ht_io__brk5_vss_dvss
-place_pad -row IO_NORTH -location [expr {[calc_horizontal_pad_location 15] + $IO_WIDTH}] {breaker_n_2} -master gf180mcu_ht_io__brk5_vss_dvss_dvdd
-place_pad -row IO_NORTH -location [expr {[calc_horizontal_pad_location  5] + $IO_WIDTH}] {breaker_n_3} -master gf180mcu_ht_io__brk5_vss_vdd_dvss
+place_pad -row IO_NORTH -location [expr {[calc_horizontal_pad_location 15] + $IO_WIDTH}] {breaker_n_2} -master gf180mcu_ht_io__brk5_vss_vdd_dvss
+place_pad -row IO_NORTH -location [expr {[calc_horizontal_pad_location  5] + $IO_WIDTH}] {breaker_n_3} -master gf180mcu_ht_io__brk5_vss_dvss_dvdd
 place_pad -row IO_NORTH -location [expr {[calc_horizontal_pad_location  3] + $IO_WIDTH}] {breaker_n_4} -master gf180mcu_ht_io__brk5_vss_dvss
-place_pad -row IO_NORTH -location [expr {[calc_horizontal_pad_location  1] + $IO_WIDTH}] {breaker_n_5} -master gf180mcu_ht_io__brk5_vss_dvss_dvdd
+place_pad -row IO_NORTH -location [expr {[calc_horizontal_pad_location  1] + $IO_WIDTH}] {breaker_n_5} -master gf180mcu_ht_io__brk5_vss_vdd_dvss
 
 place_corners gf180mcu_fd_io__cor
 
