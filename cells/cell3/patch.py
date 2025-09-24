@@ -12,6 +12,9 @@ ly.read(source)
 dualgate = ly.find_layer(55, 0)
 if dualgate is not None:
     ly.delete_layer(dualgate)
+v5_xtor = ly.find_layer(112, 1)
+if v5_xtor is not None:
+    ly.delete_layer(v5_xtor)
 
 for i in range(ly.cells()):
     old_name = ly.cell_name(i)
