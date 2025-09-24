@@ -208,7 +208,7 @@ if __name__ == '__main__':
             ("tt_cell_macro_6", "../cells/cell6", "cell_inst_6", 2334, 2063),
             ("tt_cell_macro_7", "../cells/cell7", "cell_inst_7", 2063, 2334),
         ]), **extra_macro_config([
-            ("loopback", "macros/loopback", "loop_inst", 1015.64, 378.3),
+            ("loopback", "macros/loopback", "loop_inst", 1025.3, 377.96),
             ("tt_logo", "macros/tt_logo", "logo_inst", 2334, 417),
             ("wiring", "macros/wiring", "wiring_inst", 0, 0),
         ])},

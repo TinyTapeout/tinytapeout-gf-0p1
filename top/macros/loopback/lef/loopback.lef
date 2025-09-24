@@ -6,13 +6,13 @@ MACRO loopback
   CLASS COVER ;
   FOREIGN loopback ;
   ORIGIN 0.000 0.000 ;
-  SIZE 144.320 BY 44.320 ;
+  SIZE 125.000 BY 35.000 ;
   PIN A
     DIRECTION INOUT ;
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 0.000 0.000 44.320 44.320 ;
+        RECT 0.000 0.000 25.000 35.000 ;
     END
   END A
   PIN B
@@ -20,12 +20,12 @@ MACRO loopback
     USE SIGNAL ;
     PORT
       LAYER Metal2 ;
-        RECT 100.000 0.000 144.320 44.320 ;
+        RECT 100.000 0.000 125.000 35.000 ;
     END
   END B
   OBS
       LAYER Metal2 ;
-        RECT 44.320 0.000 100.000 44.320 ;
+        RECT 25.000 10.000 100.000 35.000 ;
   END
 END loopback
 END LIBRARY
