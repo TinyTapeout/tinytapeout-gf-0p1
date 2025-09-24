@@ -11,7 +11,7 @@ img = Image.open("art/tt_logo.png")
 LAYER = 81  # Metal5
 DATATYPE_DRAWING = 0
 DATATYPE_SLOT = 3
-PIXEL_SIZE = 0.36 # um
+PIXEL_SIZE = 0.44 # um
 
 LAYER_PR = 0
 DATATYPE_BOUNDARY = 0
