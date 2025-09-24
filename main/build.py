@@ -134,7 +134,7 @@ if __name__ == '__main__':
 
     flow_cfg = {
         "PL_TARGET_DENSITY_PCT": 60,
-        "CLOCK_PERIOD": 60,
+        "CLOCK_PERIOD": 70,
         "PL_RESIZER_HOLD_SLACK_MARGIN": 0.1,
         "GRT_RESIZER_HOLD_SLACK_MARGIN": 0.05,
         "RUN_LINTER": True,
@@ -143,6 +143,10 @@ if __name__ == '__main__':
         "RUN_KLAYOUT_XOR": False,
         "RUN_KLAYOUT_DRC": False,
         "DESIGN_REPAIR_BUFFER_OUTPUT_PORTS": False,
+        "RUN_HEURISTIC_DIODE_INSERTION": True,
+        "HEURISTIC_ANTENNA_THRESHOLD": 100,
+        "GRT_ANTENNA_ITERS": 10,
+        "GRT_ANTENNA_MARGIN": 30,
         "TOP_MARGIN_MULT": 1,
         "BOTTOM_MARGIN_MULT": 1,
         "LEFT_MARGIN_MULT": 6,
