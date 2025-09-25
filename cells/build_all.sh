@@ -15,7 +15,7 @@ pushd cell4
 ./update.sh
 popd
 pushd cell5
-./build.py
+./update.sh
 popd
 pushd cell6
 ./update.sh
