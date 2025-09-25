@@ -18,8 +18,8 @@ pushd cell5
 ./build.py
 popd
 pushd cell6
-./build.py
+./update.sh
 popd
 pushd cell7
-./build.py
+./update.sh
 popd
