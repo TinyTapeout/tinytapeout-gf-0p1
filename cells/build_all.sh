@@ -12,7 +12,7 @@ pushd cell3
 ./update.sh
 popd
 pushd cell4
-./build.py
+./update.sh
 popd
 pushd cell5
 ./build.py
