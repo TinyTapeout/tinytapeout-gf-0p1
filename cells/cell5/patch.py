@@ -13,6 +13,8 @@ lvpwell = ly.find_layer(204, 0)
 nplus = ly.find_layer(32, 0)
 pplus = ly.find_layer(31, 0)
 contact = ly.find_layer(33, 0)
+metal1 = ly.find_layer(34, 0)
+via1 = ly.find_layer(35, 0)
 pr_boundary = ly.find_layer(0, 0)
 
 for c in ly.each_cell():
@@ -48,5 +50,11 @@ for c in ly.each_cell():
         c.shapes(nplus).clear()
         for box in fixup:
             c.shapes(nplus).insert(box)
+
+        if c.name.endswith("__dff_1"):
+            c.shapes(metal1).insert(db.Box(db.Point(5750, 1650), db.Point(6250, 1950)))
+                
+        if c.name.endswith("__clkinv_4"):
+            c.shapes(metal1).insert(db.Box(db.Point(3050, 4400), db.Point(3350, 4900)))
 
 ly.write(target)
