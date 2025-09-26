@@ -2,7 +2,7 @@
 
 BUILD=FALSE
 SEAL=FALSE
-FILL=TRUE
+FILL=FALSE
 CHECK=TRUE
 
 DIE_WIDTH=2975.60
@@ -29,6 +29,7 @@ then
     GDS=$NEW_GDS
 fi
 
+GDS=runs/test/final/gds/tt_top.fill.gds
 if [ "$CHECK" == "TRUE" ]
 then
     klayout -b -zz -r $PDK_ROOT/$PDK/libs.tech/klayout/tech/drc/rule_decks/density.drc -rd input=$GDS
