@@ -184,6 +184,7 @@ if __name__ == '__main__':
         "dir::src/blackbox/tt_cell_macro_5.v",
         "dir::src/blackbox/tt_cell_macro_6.v",
         "dir::src/blackbox/tt_cell_macro_7.v",
+        "dir::src/blackbox/tt_buffer_macro.v",
         "dir::src/blackbox/loopback.v",
         "dir::src/blackbox/tt_logo.v",
         "dir::src/blackbox/wiring.v",
@@ -207,6 +208,7 @@ if __name__ == '__main__':
             ("tt_cell_macro_5", "../cells/cell5", "cell_inst_5", 2334, 688),
             ("tt_cell_macro_6", "../cells/cell6", "cell_inst_6", 2334, 2063),
             ("tt_cell_macro_7", "../cells/cell7", "cell_inst_7", 2063, 2334),
+            ("tt_buffer_macro", "../buffer", "buffer_inst", 1125, 2484),
         ]), **extra_macro_config([
             ("loopback", "macros/loopback", "loop_inst", 1025.3, 377.96),
             ("tt_logo", "macros/tt_logo", "logo_inst", 2334, 417),
@@ -228,6 +230,7 @@ if __name__ == '__main__':
             "cell_inst_5 vddcore3 vss VDD VSS",
             "cell_inst_6 vddcore4 vss VDD VSS",
             "cell_inst_7 vddcore4 vss VDD VSS",
+            "buffer_inst vddcore0 vss VDD VSS",
         ],
         "IGNORE_DISCONNECTED_MODULES": [
             "gf180mcu_ht_io__brk5_vss_dvss",

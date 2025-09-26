@@ -20,12 +20,8 @@ module tt_top (
 `ifdef CONNECT_ANALOG_PADS
     inout wire loop1,
     inout wire loop2,
-    inout wire tie,
-    inout wire ta,
-    inout wire toe,
-    inout wire ty,
 `endif
-    inout wire [49:0] digital_pad
+    inout wire [53:0] digital_pad
 );
 
 
@@ -69,7 +65,6 @@ wire [2:0] pt_bi_SL;
 wire [2:0] pt_bi_CS;
 wire [2:0] pt_bi_PD;
 wire [2:0] pt_bi_PU;
-
 
 tt_main_macro main_inst (
 `ifdef USE_POWER_PINS
@@ -249,6 +244,44 @@ tt_cell_macro_7 cell_inst_7 (
     .hsig_PU(hsig_PU[7])
 );
 
+wire tie_in, tie_out;
+wire ta_in, ta_out;
+wire toe_in, toe_out;
+wire ty_in, ty_out;
+wire [2:0] lb_in_PD;
+wire [2:0] lb_in_PU;
+wire lb_bi_Y;
+wire lb_bi_OE;
+wire lb_bi_IE;
+wire lb_bi_SL;
+wire lb_bi_CS;
+wire lb_bi_PD;
+wire lb_bi_PU;
+
+tt_buffer_macro buffer_inst (
+`ifdef USE_POWER_PINS
+    .VSS(vss),
+    .VDD(vddcore0),
+`endif
+    .Y_out(ty_out),
+    .OE_in(toe_in),
+    .A_in(ta_in),
+    .IE_in(tie_in),
+    .IE_out(tie_out),
+    .A_out(ta_out),
+    .OE_out(toe_out),
+    .Y_in(ty_in),
+    .lb_in_PD,
+    .lb_in_PU,
+    .lb_bi_Y,
+    .lb_bi_OE,
+    .lb_bi_IE,
+    .lb_bi_SL,
+    .lb_bi_CS,
+    .lb_bi_PD,
+    .lb_bi_PU
+);
+
 loopback loop_inst (
 `ifdef CONNECT_ANALOG_PADS
     .A(loop1),
@@ -290,13 +323,8 @@ wiring wiring_inst (
     .vss_pad_w_18(vss),
     .vddcore2_pad_w_19(vddcore2),
     .loop_pad_s_6(loop1),
-    .loop_pad_s_7(loop2),
-    .tie_pad_n_12(tie),
-    .ta_pad_n_13(ta),
-    .toe_pad_n_14(toe),
-    .ty_pad_n_15(ty)
+    .loop_pad_s_7(loop2)
 );
-
 
 // IO_WEST
 (* keep *) gf180mcu_fd_io__bi_24t   pad_w_0     (.PAD(digital_pad[ 0]), .Y(hsig_Y[1]), .A(hsig_A[1]), .OE(hsig_OE[1]), .IE(hsig_IE[1]), .SL(hsig_SL[1]), .CS(hsig_CS[1]), .PD(hsig_PD[1]), .PU(hsig_PU[1]));
@@ -436,18 +464,11 @@ wiring wiring_inst (
 (* keep *) gf180mcu_fd_io__in_s     pad_n_8     (.PAD(digital_pad[44]), .Y(pt_in_Y[1]), .PD(pt_in_PD[1]), .PU(pt_in_PU[1]));
 (* keep *) gf180mcu_fd_io__bi_t     pad_n_9     (.PAD(digital_pad[45]), .Y(pt_bi_Y[0]), .A(pt_bi_A[0]), .OE(pt_bi_OE[0]), .IE(pt_bi_IE[0]), .PDRV1(pt_bi_PDRV1), .PDRV0(pt_bi_PDRV0), .SL(pt_bi_SL[0]), .CS(pt_bi_CS[0]), .PD(pt_bi_PD[0]), .PU(pt_bi_PU[0]));
 (* keep *) gf180mcu_fd_io__bi_24t   pad_n_10    (.PAD(digital_pad[46]), .Y(pt_bi_Y[1]), .A(pt_bi_A[1]), .OE(pt_bi_OE[1]), .IE(pt_bi_IE[1]), .SL(pt_bi_SL[1]), .CS(pt_bi_CS[1]), .PD(pt_bi_PD[1]), .PU(pt_bi_PU[1]));
-(* keep *) gf180mcu_fd_io__bi_24t   pad_n_11    (.PAD(digital_pad[47]), .Y(ty), .A(ta), .OE(toe), .IE(tie), .SL(pt_bi_SL[2]), .CS(pt_bi_CS[2]), .PD(pt_bi_PD[2]), .PU(pt_bi_PU[2]));
-`ifdef CONNECT_ANALOG_PADS
-(* keep *) gf180mcu_ht_io_fix__asig_5p0 pad_n_12 (.ASIG5V(tie));
-(* keep *) gf180mcu_ht_io_fix__asig_5p0 pad_n_13 (.ASIG5V(ta));
-(* keep *) gf180mcu_ht_io_fix__asig_5p0 pad_n_14 (.ASIG5V(toe));
-(* keep *) gf180mcu_ht_io_fix__asig_5p0 pad_n_15 (.ASIG5V(ty));
-`else
-(* keep *) gf180mcu_ht_io_fix__asig_5p0 pad_n_12 ();
-(* keep *) gf180mcu_ht_io_fix__asig_5p0 pad_n_13 ();
-(* keep *) gf180mcu_ht_io_fix__asig_5p0 pad_n_14 ();
-(* keep *) gf180mcu_ht_io_fix__asig_5p0 pad_n_15 ();
-`endif
+(* keep *) gf180mcu_fd_io__bi_24t   pad_n_11    (.PAD(digital_pad[47]), .Y(ty_in), .A(ta_out), .OE(toe_out), .IE(tie_out), .SL(pt_bi_SL[2]), .CS(pt_bi_CS[2]), .PD(pt_bi_PD[2]), .PU(pt_bi_PU[2]));
+(* keep *) gf180mcu_fd_io__in_c     pad_n_12    (.PAD(digital_pad[48]), .Y(tie_in), .PD(lb_in_PD[0]), .PU(lb_in_PU[0]));
+(* keep *) gf180mcu_fd_io__in_c     pad_n_13    (.PAD(digital_pad[49]), .Y(ta_in), .PD(lb_in_PD[1]), .PU(lb_in_PU[1]));
+(* keep *) gf180mcu_fd_io__in_c     pad_n_14    (.PAD(digital_pad[50]), .Y(toe_in), .PD(lb_in_PD[2]), .PU(lb_in_PU[2]));
+(* keep *) gf180mcu_fd_io__bi_24t   pad_n_15    (.PAD(digital_pad[51]), .Y(lb_bi_Y), .A(ty_out), .OE(lb_bi_OE), .IE(lb_bi_IE), .SL(lb_bi_SL), .CS(lb_bi_CS), .PD(lb_bi_PD), .PU(lb_bi_PU));
 `ifdef CONNECT_POWER_PADS
 (* keep *) gf180mcu_ht_io_fix__dvss     pad_n_16   (.DVSS(vss));
 (* keep *) gf180mcu_ht_io_fix__dvdd     pad_n_17   (.DVDD(vddio0n));
@@ -459,7 +480,7 @@ wiring wiring_inst (
 (* keep *) gf180mcu_ht_io_fix__dvss     pad_n_18   ();
 (* keep *) gf180mcu_ht_io_fix__dvdd     pad_n_19   ();
 `endif
-(* keep *) gf180mcu_fd_io__bi_24t   pad_n_20    (.PAD(digital_pad[48]), .Y(hsig_Y[0]), .A(hsig_A[0]), .OE(hsig_OE[0]), .IE(hsig_IE[0]), .SL(hsig_SL[0]), .CS(hsig_CS[0]), .PD(hsig_PD[0]), .PU(hsig_PU[0]));
-(* keep *) gf180mcu_fd_io__in_c     pad_n_21    (.PAD(digital_pad[49]), .Y(hclk_Y[0]), .PD(hclk_PD[0]), .PU(hclk_PU[0]));
+(* keep *) gf180mcu_fd_io__bi_24t   pad_n_20    (.PAD(digital_pad[52]), .Y(hsig_Y[0]), .A(hsig_A[0]), .OE(hsig_OE[0]), .IE(hsig_IE[0]), .SL(hsig_SL[0]), .CS(hsig_CS[0]), .PD(hsig_PD[0]), .PU(hsig_PU[0]));
+(* keep *) gf180mcu_fd_io__in_c     pad_n_21    (.PAD(digital_pad[53]), .Y(hclk_Y[0]), .PD(hclk_PD[0]), .PU(hclk_PU[0]));
 
 endmodule

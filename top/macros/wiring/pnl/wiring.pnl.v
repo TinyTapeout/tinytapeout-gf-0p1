@@ -27,11 +27,7 @@ module wiring (
     inout wire vss_pad_w_18,
     inout wire vddcore2_pad_w_19,
     inout wire loop_pad_s_6,
-    inout wire loop_pad_s_7,
-    inout wire tie_pad_n_12,
-    inout wire ta_pad_n_13,
-    inout wire toe_pad_n_14,
-    inout wire ty_pad_n_15
+    inout wire loop_pad_s_7
 );
 
 endmodule
