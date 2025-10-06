@@ -8,7 +8,7 @@
    version="1.1"
    id="svg1"
    inkscape:version="1.4.2 (unknown)"
-   sodipodi:docname="gf0p1-fp-r6.svg"
+   sodipodi:docname="padframe.svg"
    inkscape:export-filename="gf0p1-fp-r6.png"
    inkscape:export-xdpi="14.767442"
    inkscape:export-ydpi="14.767442"
@@ -27,14 +27,14 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="0.16156335"
-     inkscape:cx="5623.1813"
-     inkscape:cy="5623.1813"
+     inkscape:cx="5629.3708"
+     inkscape:cy="5128.0194"
      inkscape:window-width="3840"
      inkscape:window-height="2072"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g579" />
+     inkscape:current-layer="g566" />
   <defs
      id="defs1" />
   <g
@@ -379,19 +379,19 @@
              d="M 1468.955,588.00054 V 361.34174"
              id="path396" />
           <path
-             style="fill:none;fill-opacity:1;stroke:#ab37c8;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+             style="fill:none;fill-opacity:1;stroke:#44aa00;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
              d="m 1032.4429,361.34172 v 144.89864 h 420.637 V 361.34174"
              id="path403" />
           <path
-             style="fill:none;fill-opacity:1;stroke:#ab37c8;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+             style="fill:none;fill-opacity:1;stroke:#d4aa00;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
              d="m 1133.6334,361.34172 v 118.4403 h 303.5714 V 361.34174"
              id="path404" />
           <path
-             style="fill:none;fill-opacity:1;stroke:#ab37c8;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+             style="fill:none;fill-opacity:1;stroke:#d4aa00;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
              d="m 1234.8238,361.34172 v 91.98194 h 186.5059 v -91.98192"
              id="path405" />
           <path
-             style="fill:none;fill-opacity:1;stroke:#ab37c8;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+             style="fill:none;fill-opacity:1;stroke:#d4aa00;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
              d="m 1336.0143,361.34172 v 65.52364 h 69.4403 v -65.52362"
              id="path406" />
           <path
@@ -1543,7 +1543,7 @@
         <g
            id="g567">
           <rect
-             style="fill:#ab37c8;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.752941"
+             style="fill:#44aa00;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.752941"
              id="rect53"
              width="75"
              height="280"
@@ -1565,7 +1565,7 @@
         <g
            id="g566">
           <rect
-             style="fill:#ab37c8;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.752941"
+             style="fill:#d4aa00;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.752941"
              id="rect54"
              width="75"
              height="280"
@@ -1573,21 +1573,21 @@
              y="81.341721" />
           <text
              xml:space="preserve"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:44.0972px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.752941"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:44.0972px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.752941"
              x="-221.89293"
              y="1144.327"
              id="text165"
              transform="rotate(-90)"><tspan
                sodipodi:role="line"
                id="tspan165"
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:44.0972px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:none;stroke-width:10"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:44.0972px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:10;fill-opacity:1"
                x="-221.89293"
                y="1144.327">pt_OE</tspan></text>
         </g>
         <g
            id="g565">
           <rect
-             style="fill:#ab37c8;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.752941"
+             style="fill:#d4aa00;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.752941"
              id="rect55"
              width="75"
              height="280"
@@ -1595,21 +1595,21 @@
              y="81.341721" />
           <text
              xml:space="preserve"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:44.0972px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.752941"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:44.0972px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.752941"
              x="-223.1938"
              y="1245.3411"
              id="text166"
              transform="rotate(-90)"><tspan
                sodipodi:role="line"
                id="tspan166"
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:44.0972px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:none;stroke-width:10"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:44.0972px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:10;fill-opacity:1"
                x="-223.1938"
                y="1245.3411">pt_A</tspan></text>
         </g>
         <g
            id="g564">
           <rect
-             style="fill:#ab37c8;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.752941"
+             style="fill:#d4aa00;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.752941"
              id="rect56"
              width="75"
              height="280"
@@ -1617,14 +1617,14 @@
              y="81.341721" />
           <text
              xml:space="preserve"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:44.0972px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.752941"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:44.0972px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.752941"
              x="-221.89293"
              y="1346.4653"
              id="text167"
              transform="rotate(-90)"><tspan
                sodipodi:role="line"
                id="tspan167"
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:44.0972px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:none;stroke-width:10"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:44.0972px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:10;fill-opacity:1"
                x="-221.89293"
                y="1346.4653">pt_IE</tspan></text>
         </g>
