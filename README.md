@@ -4,6 +4,8 @@ Experimental Tiny Tapeout chip for GlobalFoundries 180nm MCU process.
 
 - Visit [tinytapeout.com](https://tinytapeout.com/) for more information on the project and how to get involved.
 
+If you want to build Tiny Tapeout yourself, please refer to [BUILDING.md](BUILDING.md).
+
 # Project index
 
 | Address | Author | Title | Source tree |
