@@ -33,7 +33,8 @@ Then assemble the top level:
     - in the layer list, select COMP, Nwell, LVPWELL, Dualgate and Poly2
         (hold the <kbd>Ctrl</kbd> key to select multiple layers)
     - Edit > Utilities > Fill Tool
-    - on the "Fill Area" tab, pick "All (whole cell)"
+    - on the "Fill Area" tab, pick "All (whole cell)" and
+        set the margin to 3.5 um
     - on the "Excluded Areas" tab, pick "Selected layers" and
         set the spacing to 2 um
     - on the "Fill Cell" tab, set the fill cell to `fill_comp`
