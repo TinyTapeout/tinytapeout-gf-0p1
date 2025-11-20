@@ -4,7 +4,7 @@ read_current_odb
 
 set IO_LENGTH 355
 set IO_WIDTH 75
-set IO_OFFSET 20.3
+set IO_OFFSET 0
 set MAX_NUM_PADS_HORIZONTAL 22
 set MAX_NUM_PADS_VERTICAL 22
 
