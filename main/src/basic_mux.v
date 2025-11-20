@@ -7,8 +7,7 @@ module basic_mux (
     output reg  [23:0] ow,
     input  wire [ 3:0] pad_in,
     output wire [ 1:0] pad_out,
-    output wire [ 3:0] pad_dir,
-    output wire [17:0] pad_config
+    output wire [21:0] pad_config
 );
 
   wire p00_selected = (addr == 5'd00) & ena;
@@ -38,7 +37,6 @@ module basic_mux (
       .ow (p02_ow),
       .pad_in,
       .pad_out,
-      .pad_dir,
       .pad_config
   );
 

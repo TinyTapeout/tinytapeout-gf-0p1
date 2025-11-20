@@ -6,8 +6,7 @@ module p02_wrapper (
   output wire [23:0] ow,
   input wire [3:0] pad_in,
   output wire [1:0] pad_out,
-  output wire [3:0] pad_dir,
-  output wire [17:0] pad_config
+  output wire [21:0] pad_config
 );
 
 wire [7:0] uio_in;
@@ -32,7 +31,6 @@ tt_um_pad_test tt_um_I (
   .rst_n   (rst_n),
   .pad_in,
   .pad_out,
-  .pad_dir,
   .pad_config
 );
 
