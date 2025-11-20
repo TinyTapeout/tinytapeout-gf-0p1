@@ -33,18 +33,20 @@ Then assemble the top level:
     - in the layer list, select COMP, Nwell, LVPWELL, Dualgate and Poly2
         (hold the <kbd>Ctrl</kbd> key to select multiple layers)
     - Edit > Utilities > Fill Tool
-    - on the "Fill Area" tab, pick "All (whole cell)" and
-        set the margin to 19.8 um
+    - on the "Fill Area" tab, pick "All (whole cell)"
     - on the "Excluded Areas" tab, pick "Selected layers" and
         set the spacing to 2 um
     - on the "Fill Cell" tab, set the fill cell to `fill_comp`
         and the boundary layer to `PR_bndry 0/0`
     - leave the other settings at their defaults
     - press "OK" and wait for the fill to be added
-- add fill for the metal layers
-    - repeat the above procedure for each metal layer, each time
+- add fill for Poly2 and metal layers
+    - repeat the above procedure for Poly2 and each metal layer, each time
         selecting a different set of layers to exclude and a different
         fill cell, but keeping the other options the same
+    - for Poly2, the fill cell is `fill_poly2` and the excluded
+        layers are COMP, Nwell, LVPWELL, Dualgate and Poly2
+        (same as above)
     - for Metal1, the fill cell is `fill_metal1` and the excluded
         layers are Poly2, Metal1 and Metal2
     - for Metal2, the fill cell is `fill_metal2` and the excluded
