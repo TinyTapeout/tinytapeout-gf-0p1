@@ -58,5 +58,14 @@ Then assemble the top level:
         layers are Metal3, Metal4 and Metal5
     - for Metal5, the fill cell is `fill_metal5` and the excluded
         layers are Metal4 and Metal5
+- add fill for Poly2 layer
+    - repeat the above procedure with further changes to the settings
+    - use several more excluded layers: COMP, Nwell, LVPWELL,
+        Dualgate, Poly2, Metal1, Metal2, Pad and RES\_MK
+    - on the "Fill Area" tab, keep "All (whole cell)" but
+        set the margin to 27.5 um
+    - on the "Excluded Areas" tab, keep "Selected layers" but
+        change the spacing to 20 um
+    - on the "Fill Cell" tab, set the fill cell to `fill_poly2`
 - use File > Save As to save the gds file with the fill
 
